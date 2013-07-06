@@ -1,6 +1,6 @@
 /*csslint regex-selectors:false, unqualified-attributes:false*/
 
-.pure-g-r {
+.grid-r {
     letter-spacing: -0.31em;
     *letter-spacing: normal;
     *word-spacing: -0.43em;
@@ -11,11 +11,11 @@
    and is not required in markup.
 */
 .opera-only :-o-prefocus,
-.pure-g-r {
+.grid-r {
     word-spacing: -0.43em;
 }
 
-.pure-g-r img {
+.grid-r img {
     max-width: 100%;
 }
 
@@ -32,15 +32,15 @@
 }
 
 @media (max-width: 480px) {
-    .pure-g-r > .pure-u,
-    .pure-g-r > [class *= "pure-u-"] {
+    .grid-r > .unit,
+    .grid-r > [class *= "pure-u-"] {
         width: 100%;
     }
 }
 
 @media (max-width: 767px) {
-    .pure-g-r > .pure-u,
-    .pure-g-r > [class *= "pure-u-"] {
+    .grid-r > .unit,
+    .grid-r > [class *= "pure-u-"] {
         width: 100%;
     }
     .pure-hidden-phone {

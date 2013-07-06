@@ -1,4 +1,4 @@
-.pure-g {
+.grid {
     letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
     *letter-spacing: normal; /* reset IE < 8 */
     *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
@@ -10,11 +10,11 @@
    and is not required in markup.
 */
 .opera-only :-o-prefocus,
-.pure-g {
+.grid {
     word-spacing: -0.43em;
 }
 
-.pure-u {
+.unit {
     display: inline-block;
     *display: inline; /* IE < 8: fake inline-block */
     zoom: 1;

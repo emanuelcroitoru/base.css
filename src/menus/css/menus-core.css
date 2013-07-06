@@ -1,18 +1,18 @@
 /*csslint adjoining-classes:false, outline-none:false*/
 /*TODO: Remove this lint rule override after a refactor of this code.*/
 
-.pure-menu ul {
+.menu ul {
     position: absolute;
     visibility: hidden;
 }
 
-.pure-menu.pure-menu-open {
+.menu.menu-open {
     visibility: visible;
     z-index: 2;
     width: 100%;
 }
 
-.pure-menu ul {
+.menu ul {
     left: -10000px;
     list-style: none;
     margin: 0;
@@ -21,22 +21,22 @@
     z-index: 1;
 }
 
-.pure-menu > ul { position: relative; }
+.menu > ul { position: relative; }
 
-.pure-menu-open > ul {
+.menu-open > ul {
     left: 0;
     top: 0;
     visibility: visible;
 }
 
-.pure-menu-open > ul:focus {
+.menu-open > ul:focus {
     outline: 0;
 }
 
-.pure-menu li { position: relative; }
+.menu li { position: relative; }
 
-.pure-menu a,
-.pure-menu .pure-menu-heading {
+.menu a,
+.menu .menu-heading {
     display: block;
     color: inherit;
     line-height: 1.5em;
@@ -45,14 +45,14 @@
     white-space: nowrap;
 }
 
-.pure-menu.pure-menu-horizontal > .pure-menu-heading {
+.menu.menu-horizontal > .menu-heading {
     display: inline-block;
     *display: inline;
     zoom: 1;
     margin: 0;
     vertical-align: middle;
 }
-.pure-menu.pure-menu-horizontal > ul {
+.menu.menu-horizontal > ul {
     display: inline-block;
     *display: inline;
     zoom: 1;
@@ -60,9 +60,9 @@
     height: 2.4em;
 }
 
-.pure-menu li a { padding: 5px 20px; }
+.menu li a { padding: 5px 20px; }
 
-.pure-menu-can-have-children > .pure-menu-label:after {
+.menu-can-have-children > .menu-label:after {
     content: '\25B8';
     float: right;
     /* These specific fonts have the Unicode char we need. */
@@ -71,11 +71,11 @@
     margin-top: -1px;
 }
 
-.pure-menu-can-have-children > .pure-menu-label {
+.menu-can-have-children > .menu-label {
     padding-right: 30px;
 }
 
-.pure-menu-separator {
+.menu-separator {
     background-color: #dfdfdf;
     display: block;
     height: 1px;
@@ -84,12 +84,12 @@
     overflow: hidden;
 }
 
-.pure-menu-hidden {
+.menu-hidden {
     display: none;
 }
 
 /* FIXED MENU */
-.pure-menu-fixed {
+.menu-fixed {
     position: fixed;
     top: 0;
     left: 0;
@@ -100,7 +100,7 @@
 /* HORIZONTAL MENU CODE */
 
 /* Initial menus should be inline-block so that they are horizontal */
-.pure-menu-horizontal li {
+.menu-horizontal li {
     display: inline-block;
     *display: inline;
     zoom: 1;
@@ -108,28 +108,28 @@
 }
 
 /* Submenus should still be display: block; */
-.pure-menu-horizontal li li {
+.menu-horizontal li li {
     display: block;
 }
 
 /* Content after should be down arrow */
-.pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label:after {
+.menu-horizontal > .menu-children > .menu-can-have-children > .menu-label:after {
     content: "\25BE";
 }
 /*Add extra padding to elements that have the arrow so that the hover looks nice */
-.pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label {
+.menu-horizontal > .menu-children > .menu-can-have-children > .menu-label {
     padding-right: 30px;
 }
 
 /* Adjusting separator for vertical menus */
-.pure-menu-horizontal li.pure-menu-separator {
+.menu-horizontal li.menu-separator {
 	height: 50%;
 	width: 1px;
 	margin: 0 7px;
 }
 
 /* Submenus should be horizontal separator again */
-.pure-menu-horizontal li li.pure-menu-separator {
+.menu-horizontal li li.menu-separator {
 	height: 1px;
 	width: auto;
 	margin: 7px 2px;

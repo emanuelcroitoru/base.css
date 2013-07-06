@@ -1,9 +1,9 @@
 @media (max-width: 480px) {
-    .pure-menu-horizontal {
+    .menu-horizontal {
         width: 100%;
     }
 
-    .pure-menu-children li {
+    .menu-children li {
         display: block;
         border-bottom: 1px solid black;
     }

@@ -121,7 +121,8 @@ grunt.initConfig({
                     'build/forms.css',
                     'build/grids.css',
                     'build/menus.css',
-                    'build/tables.css'
+                    'build/tables.css',
+                    'build/extras.css'
                 ],
 
                 'build/<%= pkg.name %>-min.css': [
@@ -130,7 +131,8 @@ grunt.initConfig({
                     'build/forms-min.css',
                     'build/grids-min.css',
                     'build/menus-min.css',
-                    'build/tables-min.css'
+                    'build/tables-min.css',
+                    'build/extras-min.css'
                 ],
 
                 'build/<%= pkg.name %>-nr-min.css': [
@@ -139,7 +141,8 @@ grunt.initConfig({
                     'build/forms-nr-min.css',
                     'build/grids-nr-min.css',
                     'build/menus-nr-min.css',
-                    'build/tables-min.css'
+                    'build/tables-min.css',
+                    'build/extras-min.css'
                 ]
             }
         }
@@ -205,7 +208,7 @@ grunt.initConfig({
 
             expand: true,
             cwd   : 'build/',
-            src   : ['base*.css', 'forms*.css', 'tables*.css', '<%= pkg.name %>*.css']
+            src   : ['base*.css', 'forms*.css', 'tables*.css', 'extras*.css', '<%= pkg.name %>*.css']
         },
 
         yahoo: {

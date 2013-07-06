@@ -1,0 +1,289 @@
+/* Images */
+.img-eliptical {
+	border-radius: 80%;
+}
+.img-rounded {
+	border-radius: 3px;
+}
+.img-bordered {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 5px;
+}
+
+
+/* Thumbnails */
+.thumbnails li {
+    text-align: center;
+    display: inline-block;
+    *display: inline;
+    /* IE7 inline-block hack */
+    *zoom: 1;
+    vertical-align: top;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    padding: 0.5em;        
+}
+.thumbnails {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.thumbnails a:focus {
+    outline: 0 none;   
+}
+
+.thumb {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.thumb img {
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    vertical-align: middle; /* this will remove a thin line below the image */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.thumb-bordered {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.thumb .caption {
+    text-align: left;
+    display: block;
+    margin: 0 5px 6px;
+
+}
+.thumb .caption p {
+    margin: 0.3em 0 0;
+    font-size: 75%;
+}
+.thumb .caption .caption-head {
+    font-weight: bold;
+    margin-top: 0.3em;
+}
+
+.thumb-eliptical img {
+	border-radius: 50%;
+}
+.thumb-rounded img {
+	border-radius: 3px;
+}
+
+/* Badges/Pills */
+.badge,
+.badge-error,
+.badge-warning,
+.badge-success,
+.badge-info,
+.badge-inverse {
+    padding: 0.35em 0.9em 0.35em;
+    background-color: #9D988E;
+    color: #fff;
+    display: inline-block;
+    font-size: 11.844px;
+    font-weight: bold;
+    line-height: 1.2em;
+    vertical-align: baseline;
+    white-space: nowrap;
+    border-radius: 20px;
+    margin: 0.2em;
+}
+.badge-error {
+    background-color: #D13C38;
+}
+.badge-warning {
+    background-color: #E78C05;
+}
+.badge-success {
+    background-color: rgb(83, 180, 79);
+}
+.badge-info {
+    background-color: rgb(18, 169, 218);
+}
+.badge-inverse {
+    background-color: #4D370C;
+}
+
+/* Alerts */
+.alert {
+    position: relative;
+    margin-bottom: 1em;
+    padding: 1em;
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.alert label {
+    display: inline-block;
+    display: inline-block;
+    *display: inline;
+    /* IE7 inline-block hack */
+    *zoom: 1;
+    white-space: nowrap;
+}
+
+.alert {
+    background-color: rgb(209, 235, 238);
+    color: rgb(102, 131, 145);
+}
+.alert-error {
+    background-color: #D13C38;
+    color: #fff;
+}
+
+.alert-warning {
+    background-color: rgb(250, 191, 103);
+    color: rgb(151, 96, 13);
+}
+
+.alert-success {
+    background-color: rgb(83, 180, 79);
+    color: #fff;
+}
+
+
+/* Contextual Modals */
+
+.popover {
+    position: relative;
+    width: 300px;
+    background-color: #f0f1f3;
+    color: #2f3034;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border: 1px solid #bfc0c8;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    box-padding: border-box;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+
+.arrow-border, .arrow {
+    border-style: solid;
+    border-width: 10px;
+    height:0;
+    width:0;
+    position:absolute;
+}
+
+
+/* POPOVER ARROW POSITIONING BOTTOM */
+
+.popover.bottom .arrow-border {
+    border-color: #bfc0c8 transparent transparent transparent;
+    bottom: -20px;
+    left: 50%;
+}
+.popover.bottom .arrow {
+    border-color: #f0f1f3 transparent transparent transparent; 
+    bottom:-19px;
+    left: 50%;
+}
+
+/* POPOVER ARROW POSITIONING TOP*/
+
+.popover.top .arrow-border {
+    border-color: transparent transparent #bfc0c8 transparent;
+    top: -21px;
+    left: 50%;
+}
+.popover.top .arrow {
+    border-color: transparent transparent #f0f1f3 transparent; 
+    top:-20px;
+    left: 50%;
+}
+
+/* POPOVER ARROW POSITIONING RIGHT*/
+
+.popover.right .arrow-border {
+    border-color: transparent transparent transparent #bfc0c8;
+    top: 45%;
+    right: -21px;
+}
+.popover.right .arrow {
+    border-color: transparent transparent transparent #f0f1f3; 
+    top:45%;
+    right: -20px;
+}
+
+
+/* POPOVER ARROW POSITIONING LEFT*/
+
+.popover.left .arrow-border {
+    border-color: transparent #bfc0c8 transparent transparent;
+    top: 45%;
+    left: -21px;
+}
+.popover.left .arrow {
+    border-color: transparent #f0f1f3 transparent transparent; 
+    top:45%;
+    left: -20px;
+}
+
+
+/* BUTTON IMPROVEMENTS */
+.btn-block {
+    display: block;
+}
+.btn.btn-small {
+    padding: .6em 2em .65em;
+    font-size:70%;
+}
+.btn.btn-large {
+    padding: .8em 5em .9em;
+    font-size:110%;
+}
+.btn.btn-selected {
+    background-color: #345fcb;
+    color: #fff;
+}
+.btn.btn-secondary {
+    background: rgb(161, 195, 238);
+    color: rgb(26, 88, 122);
+}
+.btn.btn-error {
+    background: rgb(214, 86, 75);
+    color: white;
+}
+.btn.btn-success {
+    background: rgb(54, 197, 71);
+    color: white;
+}
+.btn.btn-warning {
+    background: rgb(255, 163, 0);
+    color: white;
+}
+
+
+
+/* clearfix
+-------------------------------------------------------------*/
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+
+/* whereto? \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* gumshoe */
+

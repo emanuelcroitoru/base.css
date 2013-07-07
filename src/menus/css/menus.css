@@ -15,14 +15,12 @@
     border: none;
 }
 
-
 /* LINK STYLES */
 
 .menu a {
     border: 1px solid transparent;
     border-left: none;
     border-right: none;
-
 }
 
 .menu a,
@@ -38,7 +36,6 @@
 .menu .menu-open {
     background: #dedede;
 }
-
 
 .menu li a:hover,
 .menu li a:focus {

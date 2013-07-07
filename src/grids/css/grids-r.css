@@ -20,13 +20,13 @@
 }
 
 @media (min-width: 980px) {
-    .pure-visible-phone {
+    .visible-phone {
         display: none;
     }
-    .pure-visible-tablet {
+    .visible-tablet {
         display: none;
     }
-    .pure-hidden-desktop {
+    .hidden-desktop {
         display: none;
     }
 }
@@ -43,19 +43,19 @@
     .grid-r > [class *= "pure-u-"] {
         width: 100%;
     }
-    .pure-hidden-phone {
+    .hidden-phone {
         display: none;
     }
-    .pure-visible-desktop {
+    .visible-desktop {
         display: none;
     }
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
-    .pure-hidden-tablet {
+    .hidden-tablet {
         display: none;
     }
-    .pure-visible-desktop {
+    .visible-desktop {
         display: none;
     }
 }

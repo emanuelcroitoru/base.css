@@ -1,4 +1,14 @@
 /* Images */
+
+img {
+  width: auto	9;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
 .img-eliptical {
 	border-radius: 80%;
 }
@@ -114,7 +124,7 @@
 .alert {
     position: relative;
     margin-bottom: 1em;
-    padding: 1em;
+    padding: 0.8em 1em;
     background: #ccc;
     border-radius: 3px;
 }
@@ -129,22 +139,29 @@
 }
 
 .alert {
-    background-color: rgb(209, 235, 238);
-    color: rgb(102, 131, 145);
-}
-.alert-error {
-    background-color: #D13C38;
-    color: #fff;
+    color: #c09853;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: #fcf8e3;
+    border: 1px solid #fbeed5;
 }
 
+.alert-error {
+    color: #b94a48;
+    background-color: #f2dede;
+    border-color: #eed3d7;
+}
+
+/*
 .alert-warning {
     background-color: rgb(250, 191, 103);
     color: rgb(151, 96, 13);
 }
+*/
 
 .alert-success {
-    background-color: rgb(83, 180, 79);
-    color: #fff;
+    color: #468847;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
 }
 
 
@@ -267,23 +284,80 @@
     color: white;
 }
 
+/* bootstrap compat
+-------------------------------------------------------------*/
 
+.navbar.menu {
+  margin-bottom: 20px;
+  overflow: visible;
+  color: #777777;
+  min-height: 42px;
+  border-bottom: 1px solid #eee; 
+  background: #fafafa;
+}
+
+.navbar > * {
+  float: left;
+}
+
+.navbar-black {
+  background: #1b1b1b;  
+}
+
+.navbar li {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.navbar li a {
+  padding: 8px 20px;
+}
+
+.container { position: relative; padding: 0 20px; max-width: 960px; }
+.container-fluid { max-width: 100% }
+
+.box {
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px 30px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+}
+
+.box input[type=text],
+.box input[type=password] {
+  width: 100%;
+}
+
+/* helpers
+-------------------------------------------------------------*/
+
+.left      { float: left; clear: left; }
+.right     { float: right; clear: right; }
+.center    { display: block; text-align: center; }
+.clear     { clear: both }
+.hidden    { display: none }
+.invisible { visibility: hidden }
 
 /* clearfix
 -------------------------------------------------------------*/
 
+
+.clearfix:before,
 .clearfix:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
+    content: " "; /* 1 */
+    display: table; /* 2 */
 }
 
-.clearfix {display: inline-block;}
+.clearfix:after {
+    clear: both;
+}
 
-/* whereto? \*/
-* html .clearfix {height: 1%;}
-.clearfix {display: block;}
-/* gumshoe */
-
+/**
+ * For IE 6/7 only: 
+ Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+    *zoom: 1;
+}

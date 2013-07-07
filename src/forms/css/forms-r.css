@@ -1,5 +1,6 @@
 @media only screen and (max-width : 480px) {
     .form button[type="submit"] {
+        width: 100%;
         margin: 0.7em 0 0;
     }
 
@@ -18,6 +19,7 @@
     .form input[type="tel"],
     .form input[type="color"],
     .form label {
+        width: 100%;
         margin-bottom: 0.3em;
         display: block;
     }
@@ -39,19 +41,19 @@
         margin-bottom: 0;
     }
 
-    .form-aligned .pure-control-group label {
+    .form-aligned .control-group label {
         margin-bottom: 0.3em;
         text-align: left;
         display: block;
         width: 100%;
     }
 
-    .form-aligned .pure-controls {
+    .form-aligned .controls {
         margin: 1.5em 0 0 0;
     }
 
     /* NOTE: pure-help-inline is deprecated. Use .form-message-inline instead. */
-    .form .pure-help-inline,
+    .form .help-inline,
     .form-message-inline,
     .form-message {
         display: block;

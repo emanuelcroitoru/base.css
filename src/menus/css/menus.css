@@ -81,3 +81,27 @@
     border: none;
     border-bottom: 1px solid #b7b7b7;
 }
+
+/* dropdown
+----------------------------------------------- */
+
+li.dropdown {
+  padding: 10px 20px;
+}
+
+.dropdown ul {
+	z-index: 500;
+	position: absolute;
+	left: 0;
+  top: 1.5em;
+	padding-top: 3em;
+	display: none;
+}
+
+.dropdown ul li {
+  background: #fafafa;
+}
+
+.dropdown:hover { background: #eee }
+
+.dropdown:hover ul { display: block; visibility: visible }

@@ -10,8 +10,45 @@ img {
 }
 
 ul {
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
 }
+
+/* container
+-------------------------------------------------------------*/
+
+.container { position: relative; padding: 0 20px; max-width: 960px; margin: 0 auto; }
+.container.fluid { max-width: 100% }
+.navbar .container {
+  float: none !important;
+}
+
+
+/* paddings
+-------------------------------------------------------------*/
+
+.pad10 {
+  padding: 10px;
+}
+
+.pad15 {
+  padding: 15px;
+}
+
+.pad20 {
+  padding: 20px;
+}
+
+
+/* helpers
+-------------------------------------------------------------*/
+
+.left      { float: left !important; clear: left; }
+.right     { float: right !important; clear: right; }
+.center    { display: block; text-align: center; }
+.clear     { clear: both }
+.hidden    { display: none !important; }
+.invisible { visibility: hidden }
 
 .round {
   -webkit-border-radius: 3px;
@@ -180,59 +217,6 @@ ul {
     left: -20px;
 }
 
-
-/* paddings
--------------------------------------------------------------*/
-
-.pad10 {
-  padding: 10px;
-}
-
-.pad15 {
-  padding: 15px;
-}
-
-.pad20 {
-  padding: 20px;
-}
-
-
-/* navbar
--------------------------------------------------------------*/
-
-.navbar.menu {
-  margin-bottom: 20px;
-  overflow: visible;
-  color: #777777;
-  min-height: 42px;
-  border-bottom: 1px solid #eee; 
-  background: #fafafa;
-}
-
-.navbar > * {
-  float: left;
-}
-
-.navbar-black {
-  background: #1b1b1b;  
-}
-
-.navbar li {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 12px;
-}
-
-.navbar li a {
-  padding: 15px 20px;
-}
-
-/* container
--------------------------------------------------------------*/
-
-.container { position: relative; padding: 0 20px; max-width: 960px; margin: 0 auto; }
-.container.fluid { max-width: 100% }
-
 /* box
 -------------------------------------------------------------*/
 
@@ -249,15 +233,6 @@ ul {
   width: 100%;
 }
 
-/* helpers
--------------------------------------------------------------*/
-
-.left      { float: left; clear: left; }
-.right     { float: right; clear: right; }
-.center    { display: block; text-align: center; }
-.clear     { clear: both }
-.hidden    { display: none }
-.invisible { visibility: hidden }
 
 /* clearfix
 -------------------------------------------------------------*/

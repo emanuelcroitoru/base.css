@@ -42,6 +42,7 @@ ul {
 .left      { float: left !important; clear: left; }
 .right     { float: right !important; clear: right; }
 .center    { display: block; text-align: center; }
+.centered  { float: none !important; margin-left: auto !important; margin-right: auto !important; }
 .clear     { clear: both }
 .hidden    { display: none !important; }
 .invisible { visibility: hidden }

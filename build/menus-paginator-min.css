@@ -1,0 +1,7 @@
+/*!
+Pure v0.2.1-pre
+Copyright 2013 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yui/pure/blob/master/LICENSE.md
+*/
+.pager{list-style:none;margin:0;padding:0}.pager li{display:inline-block;*display:inline;zoom:1;margin:0 -.35em 0 0}.pager .btn{border-radius:0;padding:.8em 1.4em;vertical-align:top;height:1.1em}.pager .btn:focus{outline-style:none}.pager .prev,.pager .next{color:#C0C1C3;text-shadow:0 -1px 0 rgba(0,0,0,.45)}.pager .prev{border-radius:2px 0 0 2px}.pager .next{border-radius:0 2px 2px 0}

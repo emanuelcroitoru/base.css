@@ -1,0 +1,53 @@
+/*!
+Pure v0.2.1-pre
+Copyright 2013 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yui/pure/blob/master/LICENSE.md
+*/
+/*!
+normalize.css v1.1.2 | MIT License | git.io/normalize
+Copyright (c) Nicolas Gallagher and Jonathan Neal
+*/
+html,body,div,li,p,input,button,select,textarea {
+  font-size: 14px;
+  line-height: 24px;
+  color: #666;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+a { color: #0088cc }
+
+p { margin: 0 0 1em }
+
+abbr,acronym {
+	border-bottom: 1px dotted #000;
+	cursor: help;
+}
+
+h1, h2, h3, h4 {
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.1em;
+  margin: 0;
+  color: #333;
+  letter-spacing: -0.05em;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 20px;
+}

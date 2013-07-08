@@ -1,0 +1,351 @@
+/*!
+Pure v0.2.1-pre
+Copyright 2013 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yui/pure/blob/master/LICENSE.md
+*/
+/*csslint adjoining-classes:false, outline-none:false*/
+/*TODO: Remove this lint rule override after a refactor of this code.*/
+
+.menu ul {
+    position: absolute;
+    visibility: hidden;
+}
+
+.menu.menu-open {
+    visibility: visible;
+    z-index: 2;
+    width: 100%;
+}
+
+.menu ul {
+    left: -10000px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    top: -10000px;
+    z-index: 1;
+}
+
+.menu > ul { position: relative; }
+
+.menu-open > ul {
+    left: 0;
+    top: 0;
+    visibility: visible;
+}
+
+.menu-open > ul:focus {
+    outline: 0;
+}
+
+.menu li { position: relative; }
+
+.menu a,
+.menu .menu-heading {
+    display: block;
+    color: inherit;
+    padding: 8px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.menu.menu-horizontal > .menu-heading {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    margin: 0;
+    vertical-align: middle;
+}
+.menu.menu-horizontal > ul {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: middle;
+}
+
+.menu li a { padding: 8px 20px; }
+
+.menu-can-have-children > .menu-label:after {
+    content: '\25B8';
+    float: right;
+    /* These specific fonts have the Unicode char we need. */
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif;
+    margin-right: -20px;
+    margin-top: -1px;
+}
+
+.menu-can-have-children > .menu-label {
+    padding-right: 30px;
+}
+
+.menu-separator {
+    background-color: #dfdfdf;
+    display: block;
+    height: 1px;
+    font-size: 0;
+    margin: 7px 2px;
+    overflow: hidden;
+}
+
+.menu-hidden {
+    display: none;
+}
+
+/* FIXED MENU */
+.menu-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+/* HORIZONTAL MENU CODE */
+
+/* Initial menus should be inline-block so that they are horizontal */
+.menu-horizontal li {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: middle;
+}
+
+/* Submenus should still be display: block; */
+.menu-horizontal li li {
+    display: block;
+}
+
+/* Content after should be down arrow */
+.menu-horizontal > .menu-children > .menu-can-have-children > .menu-label:after {
+    content: "\25BE";
+}
+/*Add extra padding to elements that have the arrow so that the hover looks nice */
+.menu-horizontal > .menu-children > .menu-can-have-children > .menu-label {
+    padding-right: 30px;
+}
+
+/* Adjusting separator for vertical menus */
+.menu-horizontal li.menu-separator {
+	height: 50%;
+	width: 1px;
+	margin: 0 7px;
+}
+
+/* Submenus should be horizontal separator again */
+.menu-horizontal li li.menu-separator {
+	height: 1px;
+	width: auto;
+	margin: 7px 2px;
+}
+
+
+/*csslint adjoining-classes:false*/
+/*TODO: Remove this lint rule override after a refactor of this code.*/
+
+/* MAIN MENU STYLING */
+
+.menu.menu-open,
+.menu.menu-horizontal li .menu-children {
+    background: #fff; /* Old browsers */
+    border: 1px solid #b7b7b7;
+}
+
+/* remove borders for horizontal menus */
+.menu.menu-horizontal,
+.menu.menu-horizontal .menu-heading {
+    border: none;
+}
+
+/* LINK STYLES */
+
+.menu a {
+    border: 1px solid transparent;
+    border-left: none;
+    border-right: none;
+}
+
+.menu a,
+.menu .menu-can-have-children > li:after {
+    color: #777;
+}
+
+.menu .menu-can-have-children > li:hover:after {
+    color: #fff;
+}
+
+/* Focus style for a dropdown menu-item when the parent has been opened */
+.menu .menu-open {
+    background: #dedede;
+}
+
+.menu li a:hover,
+.menu li a:focus {
+    background: #eee;
+}
+
+/* DISABLED STATES */
+.menu li.menu-disabled a:hover,
+.menu li.menu-disabled a:focus {
+    background: #fff;
+    color: #bfbfbf;
+}
+
+.menu .menu-disabled > a {
+    background-image: none;
+    border-color: transparent;
+    cursor: default;
+}
+
+.menu .menu-disabled > a,
+.menu .menu-can-have-children.menu-disabled > a:after {
+    color: #bfbfbf;
+}
+
+/* HEADINGS */
+.menu .menu-heading {
+    color: #565d64;
+    text-transform: uppercase;
+    font-size: 90%;
+    margin-top: 0.5em;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #dfdfdf;
+}
+
+/* ACTIVE MENU ITEM */
+.menu .menu-selected a {
+    color: #000;
+}
+
+/* FIXED MENU */
+.menu.menu-open.menu-fixed {
+    border: none;
+    border-bottom: 1px solid #b7b7b7;
+}
+
+/* tabs
+----------------------------------------------- */
+
+ul.tabs {
+  border-bottom: 1px solid #b7b7b7 !important;
+  padding: 0 1em;
+}
+
+.tabs li {
+  border: 1px solid #b7b7b7;
+  border-bottom: 0;
+}
+
+.tabs li.active {
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+}
+
+/* dropdown
+----------------------------------------------- */
+
+li.dropdown {
+  padding: 15px 20px;
+}
+
+.dropdown ul {
+	z-index: 500;
+	position: absolute;
+	left: 0;
+  top: 1.5em;
+	padding-top: 3em;
+	display: none;
+}
+
+.dropdown ul li {
+  background: #fafafa;
+}
+
+.dropdown:hover { background: #eee }
+
+.dropdown:hover ul { display: block; visibility: visible }
+
+/*csslint box-model:false*/
+/*TODO: Remove this lint rule override after a refactor of this code.*/
+
+.pager {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.pager li {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    margin: 0 -0.35em 0 0;
+}
+.pager .btn {
+    border-radius: 0;
+    padding: 0.8em 1.4em;
+    vertical-align: top;
+    height: 1.1em;
+}
+.pager .btn:focus {
+    outline-style: none;
+}
+.pager .prev,
+.pager .next {
+    color: #C0C1C3;
+    text-shadow: 0 -1px 0 rgba(0,0,0, 0.45);
+}
+.pager .prev {
+    border-radius: 2px 0 0 2px;
+}
+.pager .next {
+    border-radius: 0 2px 2px 0;
+}
+
+.menu .menu-icon {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  
+    .menu-horizontal {
+        /* width: 100%; */
+    }
+
+    .menu-children li {
+        display: block;
+        border-bottom: 1px solid black;
+    }
+
+    .menu ul {
+      display: none !important;
+    }
+
+    .menu .menu-icon {
+      position: relative;
+      font-size: 24px;
+      padding: 0.6em 0.8em;
+      display: block;
+      margin: 13px 12px 12px;
+    }
+
+    .menu-icon:before {
+      content: "";
+      position: absolute;
+      top: 0.3em;
+      left: 0.3em;
+      width: 1em;
+      height: 0.125em;
+      border-top: 0.375em double #666;
+      border-bottom: 0.15em solid #666;
+    }
+
+    .menu ul:target {
+      display: block !important;
+      width: 100%;
+    }
+
+    .menu ul:target li {
+      display: block;
+    }
+
+}

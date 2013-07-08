@@ -87,7 +87,7 @@
   float: left;
 }
 
-.navbar-black {
+.menu.navbar-black {
   background: #1b1b1b;  
 }
 
@@ -110,6 +110,39 @@
 
 .navbar:after {
     clear: both;
+}
+
+/* menu icon
+----------------------------------------------- */
+
+.menu .menu-icon {
+  display: none;
+}
+
+.menu-icon {
+  position: relative;
+  font-size: 24px;
+  padding: 0.6em 0.8em;
+  margin: 12px;
+  text-indent: -9999px;
+  background: transparent;
+  border: none;
+  height: 1px;
+}
+
+.menu-icon:before {
+  content: "";
+  position: absolute;
+  top: 0.3em;
+  left: 0.3em;
+  width: 1em;
+  height: 0.125em;
+  border-top: 0.375em double #666;
+  border-bottom: 0.15em solid #666;
+}
+
+.navbar-black .menu-icon:before {
+  border-color: #ccc;
 }
 
 /* tabs

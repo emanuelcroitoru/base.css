@@ -82,11 +82,29 @@
     border-bottom: 1px solid #b7b7b7;
 }
 
+/* tabs
+----------------------------------------------- */
+
+ul.tabs {
+  border-bottom: 1px solid #b7b7b7 !important;
+  padding: 0 1em;
+}
+
+.tabs li {
+  border: 1px solid #b7b7b7;
+  border-bottom: 0;
+}
+
+.tabs li.active {
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+}
+
 /* dropdown
 ----------------------------------------------- */
 
 li.dropdown {
-  padding: 10px 20px;
+  padding: 15px 20px;
 }
 
 .dropdown ul {

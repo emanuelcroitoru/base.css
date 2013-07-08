@@ -1,10 +1,48 @@
+.menu .menu-icon {
+  display: none;
+}
+
 @media (max-width: 480px) {
+  
     .menu-horizontal {
-        width: 100%;
+        /* width: 100%; */
     }
 
     .menu-children li {
         display: block;
         border-bottom: 1px solid black;
     }
+
+    .menu ul {
+      display: none !important;
+    }
+
+    .menu .menu-icon {
+      position: relative;
+      font-size: 24px;
+      padding: 0.6em 0.8em;
+      display: block;
+      margin: 13px 12px 12px;
+    }
+
+    .menu-icon:before {
+      content: "";
+      position: absolute;
+      top: 0.3em;
+      left: 0.3em;
+      width: 1em;
+      height: 0.125em;
+      border-top: 0.375em double #666;
+      border-bottom: 0.15em solid #666;
+    }
+
+    .menu ul:target {
+      display: block !important;
+      width: 100%;
+    }
+
+    .menu ul:target li {
+      display: block;
+    }
+
 }

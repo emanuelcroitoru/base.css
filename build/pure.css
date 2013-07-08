@@ -1291,45 +1291,21 @@ h4 {
 /*csslint adjoining-classes:false, outline-none:false*/
 /*TODO: Remove this lint rule override after a refactor of this code.*/
 
-.menu ul {
-    position: absolute;
-    visibility: hidden;
-}
-
-.menu.menu-open {
-    visibility: visible;
-    z-index: 2;
-    width: 100%;
-}
-
-.menu ul {
-    left: -10000px;
+.menu li {
     list-style: none;
     margin: 0;
     padding: 0;
-    top: -10000px;
     z-index: 1;
 }
 
 .menu > ul { position: relative; }
-
-.menu-open > ul {
-    left: 0;
-    top: 0;
-    visibility: visible;
-}
-
-.menu-open > ul:focus {
-    outline: 0;
-}
-
+.menu ul:focus { outline: 0 }
 .menu li { position: relative; }
 
 .menu a,
 .menu .menu-heading {
     display: block;
     color: inherit;
-    padding: 8px 20px;
     text-decoration: none;
     white-space: nowrap;
 }
@@ -1429,7 +1405,6 @@ h4 {
 
 /* MAIN MENU STYLING */
 
-.menu.menu-open,
 .menu.menu-horizontal li .menu-children {
     background: #fff; /* Old browsers */
     border: 1px solid #b7b7b7;
@@ -1456,11 +1431,6 @@ h4 {
 
 .menu .menu-can-have-children > li:hover:after {
     color: #fff;
-}
-
-/* Focus style for a dropdown menu-item when the parent has been opened */
-.menu .menu-open {
-    background: #dedede;
 }
 
 .menu li a:hover,
@@ -1491,7 +1461,7 @@ h4 {
     color: #565d64;
     text-transform: uppercase;
     font-size: 90%;
-    margin-top: 0.5em;
+    margin-top: 10px;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: #dfdfdf;
@@ -1502,11 +1472,37 @@ h4 {
     color: #000;
 }
 
-/* FIXED MENU */
-.menu.menu-open.menu-fixed {
-    border: none;
-    border-bottom: 1px solid #b7b7b7;
+/* navbar
+-------------------------------------------------------------*/
+
+.navbar.menu {
+  margin-bottom: 20px;
+  overflow: visible;
+  color: #777777;
+  min-height: 42px;
+  border-bottom: 1px solid #eee; 
+  background: #fafafa;
 }
+
+.navbar > *, 
+.navbar .container > * {
+  float: left;
+}
+
+.navbar-black {
+  background: #1b1b1b;  
+}
+
+.navbar li {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.navbar li a {
+  padding: 15px 20px;
+}
+
 
 /* tabs
 ----------------------------------------------- */
@@ -1514,6 +1510,7 @@ h4 {
 ul.tabs {
   border-bottom: 1px solid #b7b7b7 !important;
   padding: 0 1em;
+  margin-bottom: 2em;
 }
 
 .tabs li {
@@ -1799,8 +1796,45 @@ img {
 }
 
 ul {
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
 }
+
+/* container
+-------------------------------------------------------------*/
+
+.container { position: relative; padding: 0 20px; max-width: 960px; margin: 0 auto; }
+.container.fluid { max-width: 100% }
+.navbar .container {
+  float: none !important;
+}
+
+
+/* paddings
+-------------------------------------------------------------*/
+
+.pad10 {
+  padding: 10px;
+}
+
+.pad15 {
+  padding: 15px;
+}
+
+.pad20 {
+  padding: 20px;
+}
+
+
+/* helpers
+-------------------------------------------------------------*/
+
+.left      { float: left !important; clear: left; }
+.right     { float: right !important; clear: right; }
+.center    { display: block; text-align: center; }
+.clear     { clear: both }
+.hidden    { display: none !important; }
+.invisible { visibility: hidden }
 
 .round {
   -webkit-border-radius: 3px;
@@ -1969,59 +2003,6 @@ ul {
     left: -20px;
 }
 
-
-/* paddings
--------------------------------------------------------------*/
-
-.pad10 {
-  padding: 10px;
-}
-
-.pad15 {
-  padding: 15px;
-}
-
-.pad20 {
-  padding: 20px;
-}
-
-
-/* navbar
--------------------------------------------------------------*/
-
-.navbar.menu {
-  margin-bottom: 20px;
-  overflow: visible;
-  color: #777777;
-  min-height: 42px;
-  border-bottom: 1px solid #eee; 
-  background: #fafafa;
-}
-
-.navbar > * {
-  float: left;
-}
-
-.navbar-black {
-  background: #1b1b1b;  
-}
-
-.navbar li {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 12px;
-}
-
-.navbar li a {
-  padding: 15px 20px;
-}
-
-/* container
--------------------------------------------------------------*/
-
-.container { position: relative; padding: 0 20px; max-width: 960px; margin: 0 auto; }
-.container.fluid { max-width: 100% }
-
 /* box
 -------------------------------------------------------------*/
 
@@ -2038,15 +2019,6 @@ ul {
   width: 100%;
 }
 
-/* helpers
--------------------------------------------------------------*/
-
-.left      { float: left; clear: left; }
-.right     { float: right; clear: right; }
-.center    { display: block; text-align: center; }
-.clear     { clear: both }
-.hidden    { display: none }
-.invisible { visibility: hidden }
 
 /* clearfix
 -------------------------------------------------------------*/

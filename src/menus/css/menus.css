@@ -87,6 +87,10 @@
   float: left;
 }
 
+.navbar .container {
+  float: none !important;
+}
+
 .navbar-black {
   background: #1b1b1b;  
 }

@@ -243,6 +243,57 @@ ul {
   width: 100%;
 }
 
+/* columns
+-------------------------------------------------------------*/
+
+.columns > * {
+  display: inline-block;
+  float: left;
+}
+
+.two.columns > * {
+  width: 48%; /* 96 + 4 */
+  margin-left: 4%
+}
+
+.three.columns > * {
+  width: 31%; /* 93 + 3.5 + 3.5 */
+  margin-left: 3.5%
+}
+
+.four.columns > * {
+  width: 22.75%; /* 92 + 2 + 2 + 2 */
+  margin-left: 3%
+}
+
+.five.columns > * {
+  width: 18%; /* 90 + (2.5 x 4) */
+  margin-left: 2.5%
+}
+
+.columns .first,
+.columns > *:first-child {
+  margin-left: 0 !important;
+}
+
+@media (max-width: 480px) {
+  .responsive .columns > * {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.columns:before,
+.columns:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.columns:after {
+    clear: both;
+}
 
 /* clearfix
 -------------------------------------------------------------*/

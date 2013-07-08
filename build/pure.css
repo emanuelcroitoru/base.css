@@ -1489,7 +1489,7 @@ h4 {
   float: left;
 }
 
-.navbar-black {
+.menu.navbar-black {
   background: #1b1b1b;  
 }
 
@@ -1512,6 +1512,39 @@ h4 {
 
 .navbar:after {
     clear: both;
+}
+
+/* menu icon
+----------------------------------------------- */
+
+.menu .menu-icon {
+  display: none;
+}
+
+.menu-icon {
+  position: relative;
+  font-size: 24px;
+  padding: 0.6em 0.8em;
+  margin: 12px;
+  text-indent: -9999px;
+  background: transparent;
+  border: none;
+  height: 1px;
+}
+
+.menu-icon:before {
+  content: "";
+  position: absolute;
+  top: 0.3em;
+  left: 0.3em;
+  width: 1em;
+  height: 0.125em;
+  border-top: 0.375em double #666;
+  border-bottom: 0.15em solid #666;
+}
+
+.navbar-black .menu-icon:before {
+  border-color: #ccc;
 }
 
 /* tabs
@@ -1592,31 +1625,6 @@ li.dropdown {
     border-radius: 0 2px 2px 0;
 }
 
-.menu .menu-icon {
-  display: none;
-}
-
-.menu-icon {
-  position: relative;
-  font-size: 24px;
-  padding: 0.6em 0.8em;
-  margin: 12px;
-  text-indent: -9999px;
-  background: transparent;
-  border: none;
-  height: 1px;
-}
-
-.menu-icon:before {
-  content: "";
-  position: absolute;
-  top: 0.3em;
-  left: 0.3em;
-  width: 1em;
-  height: 0.125em;
-  border-top: 0.375em double #666;
-  border-bottom: 0.15em solid #666;
-}
 
 @media (max-width: 480px) {
   
@@ -2036,6 +2044,57 @@ ul {
   width: 100%;
 }
 
+/* columns
+-------------------------------------------------------------*/
+
+.columns > * {
+  display: inline-block;
+  float: left;
+}
+
+.two.columns > * {
+  width: 48%; /* 96 + 4 */
+  margin-left: 4%
+}
+
+.three.columns > * {
+  width: 31%; /* 93 + 3.5 + 3.5 */
+  margin-left: 3.5%
+}
+
+.four.columns > * {
+  width: 22.75%; /* 92 + 2 + 2 + 2 */
+  margin-left: 3%
+}
+
+.five.columns > * {
+  width: 18%; /* 90 + (2.5 x 4) */
+  margin-left: 2.5%
+}
+
+.columns .first,
+.columns > *:first-child {
+  margin-left: 0 !important;
+}
+
+@media (max-width: 480px) {
+  .responsive .columns > * {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.columns:before,
+.columns:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.columns:after {
+    clear: both;
+}
 
 /* clearfix
 -------------------------------------------------------------*/

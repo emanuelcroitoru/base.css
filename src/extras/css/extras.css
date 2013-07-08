@@ -9,80 +9,14 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-.img-eliptical {
-	border-radius: 80%;
-}
-.img-rounded {
-	border-radius: 3px;
-}
-.img-bordered {
-    background-color: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 5px;
+ul {
+  padding-left: 0;
 }
 
-
-/* Thumbnails */
-.thumbnails li {
-    text-align: center;
-    display: inline-block;
-    *display: inline;
-    /* IE7 inline-block hack */
-    *zoom: 1;
-    vertical-align: top;
-    -webkit-box-sizing: border-box; 
-    -moz-box-sizing: border-box;    
-    box-sizing: border-box;
-    padding: 0.5em;        
-}
-.thumbnails {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.thumbnails a:focus {
-    outline: 0 none;   
-}
-
-.thumb {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-.thumb img {
-    max-width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    vertical-align: middle; /* this will remove a thin line below the image */
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.thumb-bordered {
-    border: 1px solid rgba(0, 0, 0, 0.2);
-}
-.thumb .caption {
-    text-align: left;
-    display: block;
-    margin: 0 5px 6px;
-
-}
-.thumb .caption p {
-    margin: 0.3em 0 0;
-    font-size: 75%;
-}
-.thumb .caption .caption-head {
-    font-weight: bold;
-    margin-top: 0.3em;
-}
-
-.thumb-eliptical img {
-	border-radius: 50%;
-}
-.thumb-rounded img {
-	border-radius: 3px;
+.round {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 
 /* Badges/Pills */
@@ -173,11 +107,7 @@ img {
     background-color: #f0f1f3;
     color: #2f3034;
     padding: 15px;
-    border: 1px solid #ccc;
     border: 1px solid #bfc0c8;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
     -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -251,40 +181,23 @@ img {
 }
 
 
-/* BUTTON IMPROVEMENTS */
-.btn-block {
-    display: block;
-}
-.btn.btn-small {
-    padding: .6em 2em .65em;
-    font-size:70%;
-}
-.btn.btn-large {
-    padding: .8em 5em .9em;
-    font-size:110%;
-}
-.btn.btn-selected {
-    background-color: #345fcb;
-    color: #fff;
-}
-.btn.btn-secondary {
-    background: rgb(161, 195, 238);
-    color: rgb(26, 88, 122);
-}
-.btn.btn-error {
-    background: rgb(214, 86, 75);
-    color: white;
-}
-.btn.btn-success {
-    background: rgb(54, 197, 71);
-    color: white;
-}
-.btn.btn-warning {
-    background: rgb(255, 163, 0);
-    color: white;
+/* paddings
+-------------------------------------------------------------*/
+
+.pad10 {
+  padding: 10px;
 }
 
-/* bootstrap compat
+.pad15 {
+  padding: 15px;
+}
+
+.pad20 {
+  padding: 20px;
+}
+
+
+/* navbar
 -------------------------------------------------------------*/
 
 .navbar.menu {
@@ -311,11 +224,17 @@ img {
 }
 
 .navbar li a {
-  padding: 8px 20px;
+  padding: 15px 20px;
 }
 
+/* container
+-------------------------------------------------------------*/
+
 .container { position: relative; padding: 0 20px; max-width: 960px; margin: 0 auto; }
-.container-fluid { max-width: 100% }
+.container.fluid { max-width: 100% }
+
+/* box
+-------------------------------------------------------------*/
 
 .box {
   width: 300px;
@@ -342,7 +261,6 @@ img {
 
 /* clearfix
 -------------------------------------------------------------*/
-
 
 .clearfix:before,
 .clearfix:after {

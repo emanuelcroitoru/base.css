@@ -191,7 +191,7 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 /* navbar
 -------------------------------------------------------------*/
 
-.navbar.menu {
+.navbar {
   margin-bottom: 20px;
   overflow: visible;
   color: #777777;
@@ -205,7 +205,11 @@ https://github.com/yui/pure/blob/master/LICENSE.md
   float: left;
 }
 
-.menu.navbar-black {
+.navbar .container {
+  float: none !important;
+}
+
+.navbar-black {
   background: #1b1b1b;  
 }
 
@@ -233,11 +237,8 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 /* menu icon
 ----------------------------------------------- */
 
-.menu .menu-icon {
-  display: none;
-}
-
 .menu-icon {
+  display: none;
   position: relative;
   font-size: 24px;
   padding: 0.6em 0.8em;

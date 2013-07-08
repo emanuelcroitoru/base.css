@@ -263,7 +263,6 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
     height: auto;
 }
 .form label {
-    margin: 0.5em 0 0.2em;
     color: #999;
     font-size: 90%;
 }
@@ -397,66 +396,52 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 }
 
 @media only screen and (max-width : 480px) {
-    .form input[type="submit"], 
-    .form button[type="submit"] {
+
+    .responsive .form input[type="submit"], 
+    .responsive .form button[type="submit"] {
         width: 100%;
-        margin: 0.7em 0 0;
     }
 
-    .form input[type="text"],
-    .form input[type="password"],
-    .form input[type="email"],
-    .form input[type="url"],
-    .form input[type="date"],
-    .form input[type="month"],
-    .form input[type="time"],
-    .form input[type="datetime"],
-    .form input[type="datetime-local"],
-    .form input[type="week"],
-    .form input[type="number"],
-    .form input[type="search"],
-    .form input[type="tel"],
-    .form input[type="color"],
-    .form textarea,
-    .form select,
-    .form label {
+    .responsive .form input[type="text"],
+    .responsive .form input[type="password"],
+    .responsive .form input[type="email"],
+    .responsive .form input[type="url"],
+    .responsive .form input[type="date"],
+    .responsive .form input[type="month"],
+    .responsive .form input[type="time"],
+    .responsive .form input[type="datetime"],
+    .responsive .form input[type="datetime-local"],
+    .responsive .form input[type="week"],
+    .responsive .form input[type="number"],
+    .responsive .form input[type="search"],
+    .responsive .form input[type="tel"],
+    .responsive .form input[type="color"],
+    .responsive .form textarea,
+    .responsive .form select,
+    .responsive .form label {
         width: 100%;
-        margin-bottom: 0.3em;
         display: block;
     }
 
-    .group input[type="text"],
-    .group input[type="password"],
-    .group input[type="email"],
-    .group input[type="url"],
-    .group input[type="date"],
-    .group input[type="month"],
-    .group input[type="time"],
-    .group input[type="datetime"],
-    .group input[type="datetime-local"],
-    .group input[type="week"],
-    .group input[type="number"],
-    .group input[type="search"],
-    .group input[type="tel"],
-    .group input[type="color"] {
-        margin-bottom: 0;
+    .responsive .form label {
+      margin-top: 1px;
     }
 
-    .form-aligned .control-group label {
+    .responsive .form-aligned .control-group label {
         margin-bottom: 0.3em;
         text-align: left;
         display: block;
         width: 100%;
     }
 
-    .form-aligned .controls {
+    .responsive .form-aligned .controls {
         margin: 1.5em 0 0 0;
     }
 
-    /* NOTE: pure-help-inline is deprecated. Use .form-message-inline instead. */
-    .form .help-inline,
-    .form-message-inline,
-    .form-message {
+    /* NOTE: pure-help-inline is deprecated. Use .responsive .form-message-inline instead. */
+    .responsive .form .help-inline,
+    .responsive .form-message-inline,
+    .responsive .form-message {
         display: block;
         font-size: 80%;
         /* Increased bottom padding to make it group with its related input element. */

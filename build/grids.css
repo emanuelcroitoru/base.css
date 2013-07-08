@@ -181,7 +181,8 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 
 /*csslint regex-selectors:false, unqualified-attributes:false*/
 
-.grid-r {
+.responsive .grid, 
+.responsive.grid {
     letter-spacing: -0.31em;
     *letter-spacing: normal;
     *word-spacing: -0.43em;
@@ -192,11 +193,12 @@ https://github.com/yui/pure/blob/master/LICENSE.md
    and is not required in markup.
 */
 .opera-only :-o-prefocus,
-.grid-r {
+.responsive .grid, 
+.responsive.grid{
     word-spacing: -0.43em;
 }
 
-.grid-r img {
+.responsive img {
     max-width: 100%;
 }
 
@@ -213,15 +215,15 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 }
 
 @media (max-width: 480px) {
-    .grid-r > .unit,
-    .grid-r > [class *= "unit-"] {
+    .responsive .unit,
+    .responsive [class *= "unit-"] {
         width: 100%;
     }
 }
 
 @media (max-width: 767px) {
-    .grid-r > .unit,
-    .grid-r > [class *= "unit-"] {
+    .responsive .unit,
+    .responsive [class *= "unit-"] {
         width: 100%;
     }
     .hidden-phone {

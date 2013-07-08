@@ -850,7 +850,6 @@ h4 {
     height: auto;
 }
 .form label {
-    margin: 0.5em 0 0.2em;
     color: #999;
     font-size: 90%;
 }
@@ -984,66 +983,52 @@ h4 {
 }
 
 @media only screen and (max-width : 480px) {
-    .form input[type="submit"], 
-    .form button[type="submit"] {
+
+    .responsive .form input[type="submit"], 
+    .responsive .form button[type="submit"] {
         width: 100%;
-        margin: 0.7em 0 0;
     }
 
-    .form input[type="text"],
-    .form input[type="password"],
-    .form input[type="email"],
-    .form input[type="url"],
-    .form input[type="date"],
-    .form input[type="month"],
-    .form input[type="time"],
-    .form input[type="datetime"],
-    .form input[type="datetime-local"],
-    .form input[type="week"],
-    .form input[type="number"],
-    .form input[type="search"],
-    .form input[type="tel"],
-    .form input[type="color"],
-    .form textarea,
-    .form select,
-    .form label {
+    .responsive .form input[type="text"],
+    .responsive .form input[type="password"],
+    .responsive .form input[type="email"],
+    .responsive .form input[type="url"],
+    .responsive .form input[type="date"],
+    .responsive .form input[type="month"],
+    .responsive .form input[type="time"],
+    .responsive .form input[type="datetime"],
+    .responsive .form input[type="datetime-local"],
+    .responsive .form input[type="week"],
+    .responsive .form input[type="number"],
+    .responsive .form input[type="search"],
+    .responsive .form input[type="tel"],
+    .responsive .form input[type="color"],
+    .responsive .form textarea,
+    .responsive .form select,
+    .responsive .form label {
         width: 100%;
-        margin-bottom: 0.3em;
         display: block;
     }
 
-    .group input[type="text"],
-    .group input[type="password"],
-    .group input[type="email"],
-    .group input[type="url"],
-    .group input[type="date"],
-    .group input[type="month"],
-    .group input[type="time"],
-    .group input[type="datetime"],
-    .group input[type="datetime-local"],
-    .group input[type="week"],
-    .group input[type="number"],
-    .group input[type="search"],
-    .group input[type="tel"],
-    .group input[type="color"] {
-        margin-bottom: 0;
+    .responsive .form label {
+      margin-top: 1px;
     }
 
-    .form-aligned .control-group label {
+    .responsive .form-aligned .control-group label {
         margin-bottom: 0.3em;
         text-align: left;
         display: block;
         width: 100%;
     }
 
-    .form-aligned .controls {
+    .responsive .form-aligned .controls {
         margin: 1.5em 0 0 0;
     }
 
-    /* NOTE: pure-help-inline is deprecated. Use .form-message-inline instead. */
-    .form .help-inline,
-    .form-message-inline,
-    .form-message {
+    /* NOTE: pure-help-inline is deprecated. Use .responsive .form-message-inline instead. */
+    .responsive .form .help-inline,
+    .responsive .form-message-inline,
+    .responsive .form-message {
         display: block;
         font-size: 80%;
         /* Increased bottom padding to make it group with its related input element. */
@@ -1228,7 +1213,8 @@ h4 {
 
 /*csslint regex-selectors:false, unqualified-attributes:false*/
 
-.grid-r {
+.responsive .grid, 
+.responsive.grid {
     letter-spacing: -0.31em;
     *letter-spacing: normal;
     *word-spacing: -0.43em;
@@ -1239,11 +1225,12 @@ h4 {
    and is not required in markup.
 */
 .opera-only :-o-prefocus,
-.grid-r {
+.responsive .grid, 
+.responsive.grid{
     word-spacing: -0.43em;
 }
 
-.grid-r img {
+.responsive img {
     max-width: 100%;
 }
 
@@ -1260,15 +1247,15 @@ h4 {
 }
 
 @media (max-width: 480px) {
-    .grid-r > .unit,
-    .grid-r > [class *= "unit-"] {
+    .responsive .unit,
+    .responsive [class *= "unit-"] {
         width: 100%;
     }
 }
 
 @media (max-width: 767px) {
-    .grid-r > .unit,
-    .grid-r > [class *= "unit-"] {
+    .responsive .unit,
+    .responsive [class *= "unit-"] {
         width: 100%;
     }
     .hidden-phone {
@@ -1475,7 +1462,7 @@ h4 {
 /* navbar
 -------------------------------------------------------------*/
 
-.navbar.menu {
+.navbar {
   margin-bottom: 20px;
   overflow: visible;
   color: #777777;
@@ -1489,7 +1476,11 @@ h4 {
   float: left;
 }
 
-.menu.navbar-black {
+.navbar .container {
+  float: none !important;
+}
+
+.navbar-black {
   background: #1b1b1b;  
 }
 
@@ -1517,11 +1508,8 @@ h4 {
 /* menu icon
 ----------------------------------------------- */
 
-.menu .menu-icon {
-  display: none;
-}
-
 .menu-icon {
+  display: none;
   position: relative;
   font-size: 24px;
   padding: 0.6em 0.8em;
@@ -1637,20 +1625,20 @@ li.dropdown {
         border-bottom: 1px solid black;
     }
 
-    .navbar.responsive ul {
+    .responsive .menu {
       display: none !important;
     }
     
-    .navbar.responsive .menu-icon {
+    .responsive .menu-icon {
       display: block !important;
     }
 
-    .navbar.responsive ul:target {
+    .responsive .menu:target {
       display: block !important;
       width: 100%;
     }
 
-    .navbar.responsive ul:target li {
+    .responsive .menu:target li {
       display: block;
     }
 
@@ -1830,10 +1818,6 @@ ul {
 
 .container { position: relative; padding: 0 20px; max-width: 960px; margin: 0 auto; }
 .container.fluid { max-width: 100% }
-.navbar .container {
-  float: none !important;
-}
-
 
 /* paddings
 -------------------------------------------------------------*/

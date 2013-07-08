@@ -264,7 +264,8 @@ ul {
 }
 
 @media (max-width: 480px) {
-  .responsive .columns > * {
+  .responsive .columns > *,
+  .responsive.columns > * {
     float: none;
     display: block;
     width: 100%;

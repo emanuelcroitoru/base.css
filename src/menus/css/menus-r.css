@@ -10,20 +10,20 @@
         border-bottom: 1px solid black;
     }
 
-    .navbar.responsive ul {
+    .responsive .menu {
       display: none !important;
     }
     
-    .navbar.responsive .menu-icon {
+    .responsive .menu-icon {
       display: block !important;
     }
 
-    .navbar.responsive ul:target {
+    .responsive .menu:target {
       display: block !important;
       width: 100%;
     }
 
-    .navbar.responsive ul:target li {
+    .responsive .menu:target li {
       display: block;
     }
 

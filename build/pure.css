@@ -1503,6 +1503,16 @@ h4 {
   padding: 15px 20px;
 }
 
+/* apply clearfix on navbar, since it floats everything */
+.navbar:before,
+.navbar:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.navbar:after {
+    clear: both;
+}
 
 /* tabs
 ----------------------------------------------- */

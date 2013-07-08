@@ -33,14 +33,14 @@
 
 @media (max-width: 480px) {
     .grid-r > .unit,
-    .grid-r > [class *= "pure-u-"] {
+    .grid-r > [class *= "unit-"] {
         width: 100%;
     }
 }
 
 @media (max-width: 767px) {
     .grid-r > .unit,
-    .grid-r > [class *= "pure-u-"] {
+    .grid-r > [class *= "unit-"] {
         width: 100%;
     }
     .hidden-phone {

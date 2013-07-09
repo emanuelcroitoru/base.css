@@ -41,7 +41,7 @@
 /* Alerts */
 .alert {
   position: relative;
-  padding: 0.8em 1em;
+  padding: 10px 15px;
   background: #ccc;
 }
 

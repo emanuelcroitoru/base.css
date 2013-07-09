@@ -1,0 +1,40 @@
+/*csslint regex-selectors:false, unqualified-attributes:false*/
+
+@media (min-width: 980px) {
+
+}
+
+@media (max-width: 480px) {
+
+/*
+  .responsive [class *="span"] {
+      width: 100%;
+  }
+*/
+
+  .responsive .columns > *,
+  .responsive.columns > * {
+    float: none;
+    display: block;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .responsive [class *="span"] {
+    width: 100% !important;
+  }
+
+  .responsive [class *="push"] {
+    margin-left: 0 !important;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+}

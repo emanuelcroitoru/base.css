@@ -4,14 +4,35 @@ html,body,div,li,p,input,button,select,textarea {
   color: #666;
 }
 
+p { margin: 0 0 1em }
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  width: auto	9;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
 a {
   text-decoration: none;
   outline: none;
 }
 
 a { color: #0088cc }
-
-p { margin: 0 0 1em }
 
 abbr,acronym {
 	border-bottom: 1px dotted #000;

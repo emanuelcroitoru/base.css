@@ -1,6 +1,7 @@
 /*csslint regex-selectors:false, unqualified-attributes:false*/
 
 @media (min-width: 980px) {
+
   .visible-phone {
     display: none;
   }
@@ -10,25 +11,14 @@
   .hidden-desktop {
     display: none;
   }
+
 }
 
 @media (max-width: 480px) {
-/*
-  .responsive [class *="unit-"] {
-      width: 100%;
-  }
-*/
+
 }
 
 @media (max-width: 767px) {
-
-  .responsive [class *="span"] {
-    width: 100% !important;
-  }
-
-  .responsive [class *="push"] {
-    margin-left: 0 !important;
-  }
 
   .hidden-phone {
     display: none;
@@ -36,13 +26,16 @@
   .visible-desktop {
     display: none;
   }
+
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
+
   .hidden-tablet {
     display: none;
   }
   .visible-desktop {
     display: none;
   }
+
 }

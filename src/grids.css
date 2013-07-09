@@ -1,0 +1,186 @@
+/* containers
+-------------------------------------------------------------*/
+
+.container {
+  position: relative;
+  padding: 0 20px;
+  width: 940px;
+  margin: 0 auto;
+}
+
+.container.fluid {
+  width: auto;
+  max-width: 940px
+}
+
+/* columns
+-------------------------------------------------------------*/
+
+.columns > * {
+  display: inline-block;
+  float: left;
+}
+
+.two.columns > * {
+  width: 50%;
+}
+
+.padded.two.columns > * {
+  width: 48%; /* 96 + 4 */
+  margin-left: 4%
+}
+
+.three.columns > * {
+  width: 33.333333%;
+}
+
+.padded.three.columns > * {
+  width: 31%; /* 93 + 3.5 + 3.5 */
+  margin-left: 3.5%
+}
+
+.four.columns > * {
+  width: 25%;
+}
+
+.padded.four.columns > * {
+  width: 22.75%; /* 92 + 2 + 2 + 2 */
+  margin-left: 3%
+}
+
+.five.columns > * {
+  width: 20%;
+}
+
+.padded.five.columns > * {
+  width: 18%; /* 90 + (2.5 x 4) */
+  margin-left: 2.5%
+}
+
+.columns .first,
+.columns > *:first-child {
+  margin-left: 0 !important;
+}
+
+.columns:before,
+.columns:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.columns:after {
+  clear: both;
+}
+
+/* grids
+-------------------------------------------------------------*/
+
+.grid {
+  letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
+  *letter-spacing: normal; /* reset IE < 8 */
+  *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
+  text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+}
+
+/* Opera as of 12 on Windows needs word-spacing.
+   The ".opera-only" selector is used to prevent actual prefocus styling
+   and is not required in markup.
+*/
+.opera-only :-o-prefocus,
+.grid {
+    word-spacing: -0.43em;
+}
+
+.container.fixed.grid,
+.fixed.grid {
+  padding: 0;
+  width: 960px;
+}
+
+/* units
+-------------------------------------------------------------*/
+
+[class *="span"] {
+  display: inline-block;
+  *display: inline; /* IE < 8: fake inline-block */
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+}
+
+[class *="push"] {
+  position: relative;
+}
+
+/* fluid, by default */
+
+.span1 { width: 8.33333% }
+.push1 { margin-left: 8.33333% }
+
+.span2 { width: 16.66667% }
+.push2 { margin-left: 16.66667% }
+
+.span3 { width: 25% }
+.push3 { margin-left: 25% }
+
+.span4 { width: 33.33333% }
+.push4 { margin-left: 33.33333% }
+
+.span5 { width: 41.66667% }
+.push5 { margin-left: 41.66667% }
+
+.span6 { width: 50% }
+.push6 { margin-left: 50% }
+
+.span7 { width: 58.33333% }
+.push7 { margin-left: 58.33333% }
+
+.span8 { width: 66.66667% }
+.push8 { margin-left: 66.66667% }
+
+.span9 { width: 75% }
+.push9 { margin-left: 75% }
+
+.span10 { width: 83.33333% }
+.push10 { margin-left: 83.33333% }
+
+.span11 { width: 91.66667% }
+.push11 { margin-left: 91.66667% }
+
+
+/* .fixed .span12 { display: block } */
+
+.fixed .span11 { width: 880px }
+.fixed .push11 { margin-left: 880px }
+
+.fixed .span10 { width: 800px }
+.fixed .push10 { margin-left: 800px }
+
+.fixed .span9 { width: 720px }
+.fixed .push9 { margin-left: 720px }
+
+.fixed .span8 { width: 640px }
+.fixed .push8 { margin-left: 640px }
+
+.fixed .span7 { width: 560px }
+.fixed .push7 { margin-left: 560px }
+
+.fixed .span6 { width: 480px }
+.fixed .push6 { margin-left: 480px }
+
+.fixed .span5 { width: 400px }
+.fixed .push5 { margin-left: 400px }
+
+.fixed .span4 { width: 320px }
+.fixed .push4 { margin-left: 320px }
+
+.fixed .span3 { width: 240px }
+.fixed .push3 { margin-left: 240px }
+
+.fixed .span2 { width: 160px }
+.fixed .push2 { margin-left: 160px }
+
+.fixed .span1 { width: 80px }
+.fixed .push1 { margin-left: 80px }

@@ -1,0 +1,30 @@
+
+@media (max-width: 480px) {
+
+  .menu-horizontal {
+    /* width: 100%; */
+  }
+
+  .menu-children li {
+    display: block;
+    border-bottom: 1px solid black;
+  }
+
+  .responsive .menu {
+    display: none !important;
+  }
+
+  .responsive .menu-icon {
+    display: block !important;
+  }
+
+  .responsive .menu:target {
+    display: block !important;
+    width: 100%;
+  }
+
+  .responsive .menu:target li {
+    display: block;
+  }
+
+}

@@ -1,16 +1,15 @@
-/* containers
+/* containers & grids
 -------------------------------------------------------------*/
 
 .container {
   position: relative;
-  padding: 0 20px;
-  width: 940px;
   margin: 0 auto;
+  max-width: 960px;
 }
 
-.container.fluid {
-  width: auto;
-  max-width: 940px
+.fixed {
+  padding: 0;
+  width: 960px;
 }
 
 /* columns
@@ -72,7 +71,7 @@
   clear: both;
 }
 
-/* grids
+/* grid fixes
 -------------------------------------------------------------*/
 
 .grid {
@@ -89,12 +88,6 @@
 .opera-only :-o-prefocus,
 .grid {
     word-spacing: -0.43em;
-}
-
-.container.fixed.grid,
-.fixed.grid {
-  padding: 0;
-  width: 960px;
 }
 
 /* units

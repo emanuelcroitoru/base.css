@@ -2,7 +2,7 @@
   "name": "base",
   "version": "0.0.1",
   "private": true,
-  "repository": "git://github.com/yui/pure.git",
+  "repository": "git://github.com/tomas/base.git",
   "devDependencies": {
     "grunt": "~0.4.1",
     "parserlib": "~0.2.2",

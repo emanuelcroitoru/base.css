@@ -141,39 +141,3 @@
 
 .span11 { width: 91.66667% }
 .push11 { margin-left: 91.66667% }
-
-
-/* .fixed .span12 { display: block } */
-
-.fixed .span11 { width: 880px }
-.fixed .push11 { margin-left: 880px }
-
-.fixed .span10 { width: 800px }
-.fixed .push10 { margin-left: 800px }
-
-.fixed .span9 { width: 720px }
-.fixed .push9 { margin-left: 720px }
-
-.fixed .span8 { width: 640px }
-.fixed .push8 { margin-left: 640px }
-
-.fixed .span7 { width: 560px }
-.fixed .push7 { margin-left: 560px }
-
-.fixed .span6 { width: 480px }
-.fixed .push6 { margin-left: 480px }
-
-.fixed .span5 { width: 400px }
-.fixed .push5 { margin-left: 400px }
-
-.fixed .span4 { width: 320px }
-.fixed .push4 { margin-left: 320px }
-
-.fixed .span3 { width: 240px }
-.fixed .push3 { margin-left: 240px }
-
-.fixed .span2 { width: 160px }
-.fixed .push2 { margin-left: 160px }
-
-.fixed .span1 { width: 80px }
-.fixed .push1 { margin-left: 80px }

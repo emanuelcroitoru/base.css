@@ -23,6 +23,11 @@
 
 @media (max-width: 767px) {
 
+  .responsive .fixed,
+  .responsive.fixed {
+    width: 100%;
+  }
+
   .responsive [class *="span"] {
     width: 100% !important;
   }
@@ -35,5 +40,9 @@
 
 @media (min-width: 768px) and (max-width: 979px) {
 
+  .responsive .fixed,
+  .responsive.fixed {
+    width: 768px;
+  }
 
 }

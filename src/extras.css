@@ -41,10 +41,8 @@
 /* Alerts */
 .alert {
   position: relative;
-  margin-bottom: 1em;
   padding: 0.8em 1em;
   background: #ccc;
-  border-radius: 3px;
 }
 
 .alert label {
@@ -81,7 +79,6 @@
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
-
 
 /* Contextual Modals */
 

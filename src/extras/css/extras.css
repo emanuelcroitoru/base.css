@@ -14,12 +14,6 @@ ul {
   padding: 0;
 }
 
-/* container
--------------------------------------------------------------*/
-
-.container { position: relative; padding: 0 20px; max-width: 960px; margin: 0 auto; }
-.container.fluid { max-width: 100% }
-
 /* paddings
 -------------------------------------------------------------*/
 
@@ -34,7 +28,6 @@ ul {
 .pad20 {
   padding: 20px;
 }
-
 
 /* helpers
 -------------------------------------------------------------*/
@@ -169,7 +162,7 @@ ul {
     left: 50%;
 }
 .popover.bottom .arrow {
-    border-color: #f0f1f3 transparent transparent transparent; 
+    border-color: #f0f1f3 transparent transparent transparent;
     bottom:-19px;
     left: 50%;
 }
@@ -182,7 +175,7 @@ ul {
     left: 50%;
 }
 .popover.top .arrow {
-    border-color: transparent transparent #f0f1f3 transparent; 
+    border-color: transparent transparent #f0f1f3 transparent;
     top:-20px;
     left: 50%;
 }
@@ -195,7 +188,7 @@ ul {
     right: -21px;
 }
 .popover.right .arrow {
-    border-color: transparent transparent transparent #f0f1f3; 
+    border-color: transparent transparent transparent #f0f1f3;
     top:45%;
     right: -20px;
 }
@@ -209,7 +202,7 @@ ul {
     left: -21px;
 }
 .popover.left .arrow {
-    border-color: transparent #f0f1f3 transparent transparent; 
+    border-color: transparent #f0f1f3 transparent transparent;
     top:45%;
     left: -20px;
 }
@@ -239,21 +232,37 @@ ul {
 }
 
 .two.columns > * {
+  width: 50%;
+}
+
+.padded.two.columns > * {
   width: 48%; /* 96 + 4 */
   margin-left: 4%
 }
 
 .three.columns > * {
+  width: 33.333333%;
+}
+
+.padded.three.columns > * {
   width: 31%; /* 93 + 3.5 + 3.5 */
   margin-left: 3.5%
 }
 
 .four.columns > * {
+  width: 25%;
+}
+
+.padded.four.columns > * {
   width: 22.75%; /* 92 + 2 + 2 + 2 */
   margin-left: 3%
 }
 
 .five.columns > * {
+  width: 20%;
+}
+
+.padded.five.columns > * {
   width: 18%; /* 90 + (2.5 x 4) */
   margin-left: 2.5%
 }
@@ -268,8 +277,8 @@ ul {
   .responsive.columns > * {
     float: none;
     display: block;
-    width: 100%;
-    margin-left: 0;
+    width: 100% !important;
+    margin-left: 0 !important;
   }
 }
 
@@ -297,7 +306,7 @@ ul {
 }
 
 /**
- * For IE 6/7 only: 
+ * For IE 6/7 only:
  Include this rule to trigger hasLayout and contain floats.
  */
 .clearfix {

@@ -120,8 +120,8 @@ grunt.initConfig({
             options: {
                 banner: [
                     '/*!',
-                    'Base.css <%= pkg.version %> | MIT License',
-                    'Copyright 2013 Fork, Ltd.',
+                    'Base.css <%= pkg.version %>',
+                    'Based on Pure and Bootstrap CSS Frameworks',
                     'http://opensource.org/licenses/MIT',
                     '*/\n'
                 ].join('\n')

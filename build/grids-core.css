@@ -4,6 +4,21 @@ Copyright 2013 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/yui/pure/blob/master/LICENSE.md
 */
+/* containers
+-------------------------------------------------------------*/
+
+.container {
+  position: relative;
+  padding: 0 20px;
+  width: 940px;
+  margin: 0 auto;
+}
+
+.container.fluid { width: auto; max-width: 940px }
+
+/* grids
+-------------------------------------------------------------*/
+
 .grid {
     letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
     *letter-spacing: normal; /* reset IE < 8 */
@@ -20,12 +35,8 @@ https://github.com/yui/pure/blob/master/LICENSE.md
     word-spacing: -0.43em;
 }
 
-.unit {
-    display: inline-block;
-    *display: inline; /* IE < 8: fake inline-block */
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
+.container.fixed.grid,
+.fixed.grid {
+  padding: 0;
+  width: 960px;
 }

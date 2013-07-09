@@ -523,6 +523,7 @@ h4 {
 .btn-active,
 .btn:active {
     box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+    position: relative;
 }
 
 .btn[disabled],
@@ -1036,6 +1037,21 @@ h4 {
     }
 }
 
+/* containers
+-------------------------------------------------------------*/
+
+.container {
+  position: relative;
+  padding: 0 20px;
+  width: 940px;
+  margin: 0 auto;
+}
+
+.container.fluid { width: auto; max-width: 940px }
+
+/* grids
+-------------------------------------------------------------*/
+
 .grid {
     letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
     *letter-spacing: normal; /* reset IE < 8 */
@@ -1052,227 +1068,144 @@ h4 {
     word-spacing: -0.43em;
 }
 
-.unit {
-    display: inline-block;
-    *display: inline; /* IE < 8: fake inline-block */
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
+.container.fixed.grid,
+.fixed.grid {
+  padding: 0;
+  width: 960px;
 }
 
-.unit-1,
-.unit-1-2,
-.unit-1-3,
-.unit-2-3,
-.unit-1-4,
-.unit-3-4,
-.unit-1-5,
-.unit-2-5,
-.unit-3-5,
-.unit-4-5,
-.unit-1-6,
-.unit-5-6,
-.unit-1-8,
-.unit-3-8,
-.unit-5-8,
-.unit-7-8,
-.unit-1-12,
-.unit-5-12,
-.unit-7-12,
-.unit-11-12,
-.unit-1-24,
-.unit-5-24,
-.unit-7-24,
-.unit-11-24,
-.unit-13-24,
-.unit-17-24,
-.unit-19-24,
-.unit-23-24 {
-    display: inline-block;
-    *display: inline; /* IE < 8: fake inline-block */
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
+[class *="span"] {
+  display: inline-block;
+  *display: inline; /* IE < 8: fake inline-block */
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
 }
 
-.unit-1 {
-    display: block;
+[class *="push"] {
+  position: relative;
 }
 
-.unit-1-2 {
-    width: 50%;
-}
+/* fluid, by default */
 
-.unit-1-3 {
-    width: 33.33333%;
-}
+.span1 { width: 8.33333% }
+.push1 { margin-left: 8.33333% }
 
-.unit-2-3 {
-    width: 66.66666%;
-}
+.span2 { width: 16.66667% }
+.push2 { margin-left: 16.66667% }
 
-.unit-1-4 {
-    width: 25%;
-}
+.span3 { width: 25% }
+.push3 { margin-left: 25% }
 
-.unit-3-4 {
-    width: 75%;
-}
+.span4 { width: 33.33333% }
+.push4 { margin-left: 33.33333% }
 
-.unit-1-5 {
-    width: 20%;
-}
+.span5 { width: 41.66667% }
+.push5 { margin-left: 41.66667% }
 
-.unit-2-5 {
-    width: 40%;
-}
+.span6 { width: 50% }
+.push6 { margin-left: 50% }
 
-.unit-3-5 {
-    width: 60%;
-}
+.span7 { width: 58.33333% }
+.push7 { margin-left: 58.33333% }
 
-.unit-4-5 {
-    width: 80%;
-}
+.span8 { width: 66.66667% }
+.push8 { margin-left: 66.66667% }
 
-.unit-1-6 {
-    width: 16.666%;
-}
+.span9 { width: 75% }
+.push9 { margin-left: 75% }
 
-.unit-5-6 {
-    width: 83.33%;
-}
+.span10 { width: 83.33333% }
+.push10 { margin-left: 83.33333% }
 
-.unit-1-8 {
-    width: 12.5%;
-}
+.span11 { width: 91.66667% }
+.push11 { margin-left: 91.66667% }
 
-.unit-3-8 {
-    width: 37.5%;
-}
 
-.unit-5-8 {
-    width: 62.5%;
-}
+/* .fixed .span12 { display: block } */
 
-.unit-7-8 {
-    width: 87.5%;
-}
+.fixed .span11 { width: 880px }
+.fixed .push11 { margin-left: 880px }
 
-.unit-1-12 {
-    width: 8.3333%;
-}
+.fixed .span10 { width: 800px }
+.fixed .push10 { margin-left: 800px }
 
-.unit-5-12 {
-    width: 41.6666%;
-}
+.fixed .span9  { width: 720px }
+.fixed .push9  { margin-left: 720px }
 
-.unit-7-12 {
-    width: 58.3333%;
-}
+.fixed .span8  { width: 640px }
+.fixed .push8  { margin-left: 640px }
 
-.unit-11-12 {
-    width: 91.6666%;
-}
+.fixed .span7  { width: 560px }
+.fixed .push7  { margin-left: 560px }
 
-.unit-1-24 {
-    width: 4.1666%;
-}
+.fixed .span6  { width: 480px }
+.fixed .push6  { margin-left: 480px }
 
-.unit-5-24 {
-    width: 20.8333%;
-}
+.fixed .span5  { width: 400px }
+.fixed .push5  { margin-left: 400px }
 
-.unit-7-24 {
-    width: 29.1666%;
-}
+.fixed .span4  { width: 320px }
+.fixed .push4  { margin-left: 320px }
 
-.unit-11-24 {
-    width: 45.8333%;
-}
+.fixed .span3  { width: 240px }
+.fixed .push3  { margin-left: 240px }
 
-.unit-13-24 {
-    width: 54.1666%;
-}
+.fixed .span2  { width: 160px }
+.fixed .push2  { margin-left: 160px }
 
-.unit-17-24 {
-    width: 70.8333%;
-}
-
-.unit-19-24 {
-    width: 79.1666%;
-}
-
-.unit-23-24 {
-    width: 95.8333%;
-}
+.fixed .span1  { width: 80px }
+.fixed .push1  { margin-left: 80px }
 
 /*csslint regex-selectors:false, unqualified-attributes:false*/
 
-.responsive .grid, 
-.responsive.grid {
-    letter-spacing: -0.31em;
-    *letter-spacing: normal;
-    *word-spacing: -0.43em;
-}
-
-/* Opera as of 12 on Windows needs word-spacing.
-   The ".opera-only" selector is used to prevent actual prefocus styling
-   and is not required in markup.
-*/
-.opera-only :-o-prefocus,
-.responsive .grid, 
-.responsive.grid{
-    word-spacing: -0.43em;
-}
-
-.responsive img {
-    max-width: 100%;
-}
-
 @media (min-width: 980px) {
-    .visible-phone {
-        display: none;
-    }
-    .visible-tablet {
-        display: none;
-    }
-    .hidden-desktop {
-        display: none;
-    }
+  .visible-phone {
+    display: none;
+  }
+  .visible-tablet {
+    display: none;
+  }
+  .hidden-desktop {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
-    .responsive .unit,
-    .responsive [class *= "unit-"] {
-        width: 100%;
-    }
+/*
+  .responsive [class *="unit-"] {
+      width: 100%;
+  }
+*/
 }
 
 @media (max-width: 767px) {
-    .responsive .unit,
-    .responsive [class *= "unit-"] {
-        width: 100%;
-    }
-    .hidden-phone {
-        display: none;
-    }
-    .visible-desktop {
-        display: none;
-    }
+
+  .responsive [class *="span"] {
+    width: 100% !important;
+  }
+
+  .responsive [class *="push"] {
+    margin-left: 0 !important;
+  }
+
+  .hidden-phone {
+    display: none;
+  }
+  .visible-desktop {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
-    .hidden-tablet {
-        display: none;
-    }
-    .visible-desktop {
-        display: none;
-    }
+  .hidden-tablet {
+    display: none;
+  }
+  .visible-desktop {
+    display: none;
+  }
 }
 
 /*csslint adjoining-classes:false, outline-none:false*/
@@ -1813,12 +1746,6 @@ ul {
   padding: 0;
 }
 
-/* container
--------------------------------------------------------------*/
-
-.container { position: relative; padding: 0 20px; max-width: 960px; margin: 0 auto; }
-.container.fluid { max-width: 100% }
-
 /* paddings
 -------------------------------------------------------------*/
 
@@ -1834,13 +1761,13 @@ ul {
   padding: 20px;
 }
 
-
 /* helpers
 -------------------------------------------------------------*/
 
 .left      { float: left !important; clear: left; }
 .right     { float: right !important; clear: right; }
 .center    { display: block; text-align: center; }
+.centered  { float: none !important; margin-left: auto !important; margin-right: auto !important; }
 .clear     { clear: both }
 .hidden    { display: none !important; }
 .invisible { visibility: hidden }
@@ -1967,7 +1894,7 @@ ul {
     left: 50%;
 }
 .popover.bottom .arrow {
-    border-color: #f0f1f3 transparent transparent transparent; 
+    border-color: #f0f1f3 transparent transparent transparent;
     bottom:-19px;
     left: 50%;
 }
@@ -1980,7 +1907,7 @@ ul {
     left: 50%;
 }
 .popover.top .arrow {
-    border-color: transparent transparent #f0f1f3 transparent; 
+    border-color: transparent transparent #f0f1f3 transparent;
     top:-20px;
     left: 50%;
 }
@@ -1993,7 +1920,7 @@ ul {
     right: -21px;
 }
 .popover.right .arrow {
-    border-color: transparent transparent transparent #f0f1f3; 
+    border-color: transparent transparent transparent #f0f1f3;
     top:45%;
     right: -20px;
 }
@@ -2007,7 +1934,7 @@ ul {
     left: -21px;
 }
 .popover.left .arrow {
-    border-color: transparent #f0f1f3 transparent transparent; 
+    border-color: transparent #f0f1f3 transparent transparent;
     top:45%;
     left: -20px;
 }
@@ -2037,21 +1964,37 @@ ul {
 }
 
 .two.columns > * {
+  width: 50%;
+}
+
+.padded.two.columns > * {
   width: 48%; /* 96 + 4 */
   margin-left: 4%
 }
 
 .three.columns > * {
+  width: 33.333333%;
+}
+
+.padded.three.columns > * {
   width: 31%; /* 93 + 3.5 + 3.5 */
   margin-left: 3.5%
 }
 
 .four.columns > * {
+  width: 25%;
+}
+
+.padded.four.columns > * {
   width: 22.75%; /* 92 + 2 + 2 + 2 */
   margin-left: 3%
 }
 
 .five.columns > * {
+  width: 20%;
+}
+
+.padded.five.columns > * {
   width: 18%; /* 90 + (2.5 x 4) */
   margin-left: 2.5%
 }
@@ -2062,11 +2005,12 @@ ul {
 }
 
 @media (max-width: 480px) {
-  .responsive .columns > * {
+  .responsive .columns > *,
+  .responsive.columns > * {
     float: none;
     display: block;
-    width: 100%;
-    margin-left: 0;
+    width: 100% !important;
+    margin-left: 0 !important;
   }
 }
 
@@ -2094,7 +2038,7 @@ ul {
 }
 
 /**
- * For IE 6/7 only: 
+ * For IE 6/7 only:
  Include this rule to trigger hasLayout and contain floats.
  */
 .clearfix {

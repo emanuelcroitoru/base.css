@@ -4,4 +4,4 @@ Copyright 2013 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/yui/pure/blob/master/LICENSE.md
 */
-.grid{letter-spacing:-.31em;*letter-spacing:normal;*word-spacing:-.43em;text-rendering:optimizespeed}.opera-only :-o-prefocus,.grid{word-spacing:-.43em}.unit{display:inline-block;*display:inline;zoom:1;letter-spacing:normal;word-spacing:normal;vertical-align:top;text-rendering:auto}
+.container{position:relative;padding:0 20px;width:940px;margin:0 auto}.container.fluid{width:auto;max-width:940px}.grid{letter-spacing:-.31em;*letter-spacing:normal;*word-spacing:-.43em;text-rendering:optimizespeed}.opera-only :-o-prefocus,.grid{word-spacing:-.43em}.container.fixed.grid,.fixed.grid{padding:0;width:960px}

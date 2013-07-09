@@ -1,6 +1,6 @@
 {
-  "name": "pure",
-  "version": "0.2.1-pre",
+  "name": "base",
+  "version": "0.0.1",
   "private": true,
   "repository": "git://github.com/yui/pure.git",
   "devDependencies": {

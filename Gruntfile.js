@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 grunt.initConfig({
 
     pkg      : grunt.file.readJSON('package.json'),
-    normalize: grunt.file.readJSON('src/base/bower.json'),
+    normalize: grunt.file.readJSON('src/normalize/bower.json'),
 
     // -- Constants ------------------------------------------------------------
 
@@ -17,41 +17,19 @@ grunt.initConfig({
 
     clean: {
         build    : ['build/'],
-        build_res: ['build/*-r.css'],
-        release  : ['release/<%= pkg.version %>/'],
-        base     : ['src/base/css/', 'src/base/bower.json', 'src/base/LICENSE.md']
+        release  : ['release/<%= pkg.version %>/']
     },
 
     // -- Copy Config ----------------------------------------------------------
 
     copy: {
-        build: {
-            expand : true,
-            flatten: true,
-            src    : 'src/*.css',
-            dest   : 'build/',
-
-            rename: function (dest, src) {
-                // normalize -> base
-                src = src.replace(/^normalize(-.+\.css|\.css)$/, 'base$1');
-                return path.join(dest, src);
-            }
-        },
 
         normalize: {
             expand : true,
             flatten: true,
             cwd    : 'bower_components/normalize-css/',
             src    : '{bower.json,LICENSE.md,normalize.css}',
-            dest   : 'src/base/',
-
-            rename: function (dest, file) {
-                if (grunt.file.isMatch('*.css', file)) {
-                    return path.join(dest, 'css', file);
-                }
-
-                return path.join(dest, file);
-            },
+            dest   : 'src/normalize/',
 
             options: {
                 processContent: function (content, file) {
@@ -72,11 +50,23 @@ grunt.initConfig({
     // -- Concat Config --------------------------------------------------------
 
     concat: {
-
-        build: {
-          src: 'src/*.css',
-          dest: 'build/<%= pkg.name %>.css'
-        }
+      build: {
+        src: [
+          'src/normalize/normalize.css',
+          'src/base.css',
+          'src/grids.css',
+          'src/grids-r.css',
+          'src/forms.css',
+          'src/forms-r.css',
+          'src/tables.css',
+          'src/menus.css',
+          'src/menus-r.css',
+          'src/buttons.css',
+          'src/extras.css',
+          'src/helpers.css',
+          'src/helpers-r.css'],
+        dest: 'build/<%= pkg.name %>.css'
+      }
     },
 
     // -- CSSLint Config -------------------------------------------------------
@@ -126,29 +116,13 @@ grunt.initConfig({
     // -- License Config -------------------------------------------------------
 
     license: {
-        normalize: {
+        insert: {
             options: {
                 banner: [
                     '/*!',
-                    'normalize.css v<%= normalize.version %> | MIT License | git.io/normalize',
-                    'Copyright (c) Nicolas Gallagher and Jonathan Neal',
-                    '*/\n'
-                ].join('\n')
-            },
-
-            expand: true,
-            cwd   : 'build/',
-            src   : ['<%= pkg.name %>*.css']
-        },
-
-        yahoo: {
-            options: {
-                banner: [
-                    '/*!',
-                    'Pure v<%= pkg.version %>',
-                    'Copyright 2013 Yahoo! Inc. All rights reserved.',
-                    'Licensed under the BSD License.',
-                    'https://github.com/yui/pure/blob/master/LICENSE.md',
+                    'Base.css <%= pkg.version %> | MIT License',
+                    'Copyright 2013 Fork, Ltd.',
+                    'http://opensource.org/licenses/MIT',
                     '*/\n'
                 ].join('\n')
             },
@@ -184,11 +158,9 @@ grunt.loadNpmTasks('grunt-contrib-watch');
 
 grunt.registerTask('default', [
     'clean:build',
-    'copy:build',
     'concat:build',
-    'clean:build_res',
     'cssmin',
-    'concat:all',
+    'concat',
     'license'
 ]);
 
@@ -235,9 +207,8 @@ grunt.registerTask('suppress', function () {
 // -- Import Tasks -------------------------------------------------------------
 
 grunt.registerTask('import-normalize', [
-    'clean:base',
-    'copy:normalize',
-    'contextualize:normalize'
+    'clean:build',
+    'copy:normalize'
 ]);
 
 // -- Bower Task ---------------------------------------------------------------
@@ -267,3 +238,5 @@ grunt.registerMultiTask('license', 'Stamps license banners on files.', function 
 
     grunt.log.writeln('Stamped license on ' + String(tally).cyan + ' files.');
 });
+
+}

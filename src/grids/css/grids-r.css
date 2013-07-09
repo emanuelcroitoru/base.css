@@ -1,63 +1,48 @@
 /*csslint regex-selectors:false, unqualified-attributes:false*/
 
-.responsive .grid, 
-.responsive.grid {
-    letter-spacing: -0.31em;
-    *letter-spacing: normal;
-    *word-spacing: -0.43em;
-}
-
-/* Opera as of 12 on Windows needs word-spacing.
-   The ".opera-only" selector is used to prevent actual prefocus styling
-   and is not required in markup.
-*/
-.opera-only :-o-prefocus,
-.responsive .grid, 
-.responsive.grid{
-    word-spacing: -0.43em;
-}
-
-.responsive img {
-    max-width: 100%;
-}
-
 @media (min-width: 980px) {
-    .visible-phone {
-        display: none;
-    }
-    .visible-tablet {
-        display: none;
-    }
-    .hidden-desktop {
-        display: none;
-    }
+  .visible-phone {
+    display: none;
+  }
+  .visible-tablet {
+    display: none;
+  }
+  .hidden-desktop {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
-    .responsive .unit,
-    .responsive [class *= "unit-"] {
-        width: 100%;
-    }
+/*
+  .responsive [class *="unit-"] {
+      width: 100%;
+  }
+*/
 }
 
 @media (max-width: 767px) {
-    .responsive .unit,
-    .responsive [class *= "unit-"] {
-        width: 100%;
-    }
-    .hidden-phone {
-        display: none;
-    }
-    .visible-desktop {
-        display: none;
-    }
+
+  .responsive [class *="span"] {
+    width: 100% !important;
+  }
+
+  .responsive [class *="push"] {
+    margin-left: 0 !important;
+  }
+
+  .hidden-phone {
+    display: none;
+  }
+  .visible-desktop {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
-    .hidden-tablet {
-        display: none;
-    }
-    .visible-desktop {
-        display: none;
-    }
+  .hidden-tablet {
+    display: none;
+  }
+  .visible-desktop {
+    display: none;
+  }
 }

@@ -1,6 +1,10 @@
 @media only screen and (max-width : 480px) {
 
-    .responsive .form input[type="submit"], 
+    .responsive .form {
+      overflow: hidden;
+    }
+
+    .responsive .form input[type="submit"],
     .responsive .form button[type="submit"] {
         width: 100%;
     }

@@ -21,7 +21,8 @@
 .center    { display: block; text-align: center; }
 .centered  { float: none !important; margin-left: auto !important; margin-right: auto !important; }
 .clear     { clear: both }
-.hidden    { display: none !important; }
+.visible   { display: inherit !important }
+.hidden    { display: none !important }
 .invisible { visibility: hidden }
 
 .round {

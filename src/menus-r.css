@@ -11,20 +11,28 @@
   }
 
   .responsive .menu {
-    display: none !important;
+    display: none;
   }
 
   .responsive .menu-icon {
-    display: block !important;
+    display: inherit !important;
   }
 
   .responsive .menu:target {
-    display: block !important;
+    display: inherit !important;
     width: 100%;
   }
 
   .responsive .menu:target li {
-    display: block;
+    display: inherit;
+  }
+
+  .toggled.menu {
+    width: 100%;
+  }
+
+  .toggled.menu li {
+    display: block !important;
   }
 
 }

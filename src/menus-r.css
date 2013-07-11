@@ -15,14 +15,14 @@
   }
 
   .responsive .menu:target li {
-    display: inherit;
+    display: block; /* or inherit */
   }
 
-  .toggled.menu {
+  .visible.menu {
     width: 100%;
   }
 
-  .toggled.menu li {
+  .visible.menu li {
     display: block;
   }
   

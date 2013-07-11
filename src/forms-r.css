@@ -31,7 +31,7 @@
     }
 
     .responsive .form label {
-      margin-top: 1px;
+        margin-top: 1px;
     }
 
     .responsive .form-aligned .control-group label {
@@ -45,13 +45,4 @@
         margin: 1.5em 0 0 0;
     }
 
-    /* NOTE: pure-help-inline is deprecated. Use .responsive .form-message-inline instead. */
-    .responsive .form .help-inline,
-    .responsive .form-message-inline,
-    .responsive .form-message {
-        display: block;
-        font-size: 80%;
-        /* Increased bottom padding to make it group with its related input element. */
-        padding: 0.2em 0 0.8em;
-    }
 }

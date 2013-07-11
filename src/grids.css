@@ -15,12 +15,12 @@
 /* columns
 -------------------------------------------------------------*/
 
-.columns > * {
+.columns > div {
   display: inline-block;
   float: left;
 }
 
-.two.columns > * {
+.two.columns > div {
   width: 50%;
 }
 
@@ -93,7 +93,18 @@
 /* units
 -------------------------------------------------------------*/
 
-[class *="span"] {
+.span1,
+.span2,
+.span3,
+.span4,
+.span5,
+.span6,
+.span7,
+.span8,
+.span9,
+.span10,
+.span11,
+.span12 {
   display: inline-block;
   *display: inline; /* IE < 8: fake inline-block */
   zoom: 1;
@@ -103,7 +114,17 @@
   text-rendering: auto;
 }
 
-[class *="push"] {
+.push1,
+.push2,
+.push3,
+.push4,
+.push5,
+.push6,
+.push7,
+.push8,
+.push9,
+.push10,
+.push11 {
   position: relative;
 }
 

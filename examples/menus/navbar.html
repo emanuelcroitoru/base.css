@@ -9,11 +9,7 @@
 
 </head>
 <body>
-  <div class="responsive navbar navbar-fixed">
-
-    <a class="navbar-header" href="/">
-      Base
-    </a>
+  <div class="responsive dark navbar fixed">
 
     <ul class="visible menu">
       <li class="location">
@@ -26,8 +22,24 @@
     <a href="#menu" class="toggle right menu-icon"></a>
 
     <ul class="right menu" id="menu">
-      <li><a href="/">Devices</a></li>
+      <li><a href="/">Home</a></li>
       <li><a href="/settings">Settings</a></li>
+      <li class="dropdown">
+        <span>Dropdown no link</span>
+        <ul>
+          <li><a href="#">Foo</a></li> 
+          <li><a href="#">Bar</a></li> 
+          <li><a href="#">Baz</a></li> 
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Dropdown with link</a>
+        <ul>
+          <li><a href="#">Foo</a></li> 
+          <li><a href="#">Bar</a></li> 
+          <li><a href="#">Baz</a></li> 
+        </ul>
+      </li>
       <li><a href="/logout">Logout</a></li>
     </ul>
 

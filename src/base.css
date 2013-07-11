@@ -1,6 +1,6 @@
 html,body,div,li,p,input,button,select,textarea {
   font-size: 14px;
-  line-height: 24px;
+  line-height: 20px;
   color: #666;
 }
 
@@ -19,12 +19,19 @@ table {
 }
 
 img {
-  width: auto	9;
+  width: auto\9;
   height: auto;
   max-width: 100%;
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
+}
+
+/* fix for google maps */
+
+#map_canvas img,
+.google-maps img {
+  max-width: none;
 }
 
 a {
@@ -40,6 +47,7 @@ abbr,acronym {
 }
 
 h1, h2, h3, h4 {
+  text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   line-height: 1.1em;
   margin: 0;
@@ -62,3 +70,42 @@ h3 {
 h4 {
   font-size: 20px;
 }
+
+
+code,
+pre {
+  padding: 0 3px 2px;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  color: #333333;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+
+code {
+  padding: 2px 4px;
+  color: #d14;
+  white-space: nowrap;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+

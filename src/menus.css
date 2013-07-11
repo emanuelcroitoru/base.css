@@ -1,75 +1,15 @@
-/*
- Pure v0.0.3
- Copyright 2013 Yahoo! Inc. All rights reserved.
- Licensed under the BSD License.
- https://github.com/yui/pure/blob/master/LICENSE.md
-*/
+.menu ul:focus { outline: 0 }
 
 .menu li {
   list-style: none;
-  margin: 0;
-  padding: 0;
   z-index: 1;
   line-height: 20px;
+  position: relative;
 }
-
-.menu > ul { position: relative; }
-.menu ul:focus { outline: 0 }
-.menu li { position: relative; }
-
-.menu a,
-.menu .menu-heading {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.menu.menu-horizontal > .menu-heading {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  margin: 0;
-  vertical-align: middle;
-}
-.menu.menu-horizontal > ul {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  vertical-align: middle;
-}
-
-.menu-can-have-children > .menu-label:after {
-  content: '\25B8';
-  float: right;
-  /* These specific fonts have the Unicode char we need. */
-  font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif;
-  margin-right: -20px;
-  margin-top: -1px;
-}
-
-.menu-can-have-children > .menu-label {
-  padding-right: 30px;
-}
-
-.menu-separator {
-  background-color: #dfdfdf;
-  display: block;
-  height: 1px;
-  font-size: 0;
-  margin: 7px 2px;
-  overflow: hidden;
-}
-
-.menu-hidden {
-  display: none;
-}
-
-/* HORIZONTAL MENU CODE */
 
 /* Initial menus should be inline-block so that they are horizontal */
 .navbar .menu li,
-.menu-horizontal li {
+.menu.horizontal li {
   display: inline-block;
   *display: inline;
   zoom: 1;
@@ -77,101 +17,27 @@
 }
 
 /* Submenus should still be display: block; */
-.menu-horizontal li li {
+.navbar .menu li li,
+.menu.horizontal li li {
   display: block;
 }
 
-/* Content after should be down arrow */
-.menu-horizontal > .menu-children > .menu-can-have-children > .menu-label:after {
-  content: "\25BE";
-}
-/*Add extra padding to elements that have the arrow so that the hover looks nice */
-.menu-horizontal > .menu-children > .menu-can-have-children > .menu-label {
-  padding-right: 30px;
-}
-
-/* Adjusting separator for vertical menus */
-.menu-horizontal li.menu-separator {
-  height: 50%;
-  width: 1px;
-  margin: 0 7px;
-}
-
-/* Submenus should be horizontal separator again */
-.menu-horizontal li li.menu-separator {
-  height: 1px;
-  width: auto;
-  margin: 7px 2px;
-}
-
-
-/* MAIN MENU STYLING */
-
-.menu.menu-horizontal li .menu-children {
-  background: #fff; /* Old browsers */
-  border: 1px solid #b7b7b7;
-}
-
-/* remove borders for horizontal menus */
-.menu.menu-horizontal,
-.menu.menu-horizontal .menu-heading {
-  border: none;
-}
-
-/* LINK STYLES */
-
-.menu a {
-  border: 1px solid transparent;
-  border-left: none;
-  border-right: none;
-}
-
 .menu a,
-.menu .menu-can-have-children > li:after {
-  color: #777;
+.dropdown > span {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-.menu .menu-can-have-children > li:hover:after {
-  color: #fff;
+.menu a, 
+.dropdown > span {
+  padding: 12px 20px;
 }
 
-.menu li a:hover,
-.menu li a:focus {
+.menu a:hover,
+.menu a:focus {
   background: #eee;
-}
-
-/* DISABLED STATES */
-.menu li.menu-disabled a:hover,
-.menu li.menu-disabled a:focus {
-  background: #fff;
-  color: #bfbfbf;
-}
-
-.menu .menu-disabled > a {
-  background-image: none;
-  border-color: transparent;
-  cursor: default;
-}
-
-.menu .menu-disabled > a,
-.menu .menu-can-have-children.menu-disabled > a:after {
-  color: #bfbfbf;
-}
-
-/* HEADINGS */
-.menu .menu-heading {
-  color: #565d64;
-  text-transform: uppercase;
-  font-size: 90%;
-  margin-top: 10px;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #dfdfdf;
-}
-
-/* ACTIVE MENU ITEM */
-.menu .menu-selected a {
-  color: #000;
 }
 
 /* navbar
@@ -181,7 +47,7 @@
   margin-bottom: 20px;
   overflow: visible;
   color: #777777;
-  min-height: 56px;
+  min-height: 44px;
   border-bottom: 1px solid #eee;
   background: #fafafa;
 }
@@ -193,16 +59,6 @@
 
 .navbar .container {
   float: none !important;
-}
-
-.navbar li {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 12px;
-}
-
-.navbar li a {
-  padding: 15px 20px;
 }
 
 /* apply clearfix on navbar, since it floats everything */
@@ -219,11 +75,9 @@
 /* menu icon
 ----------------------------------------------- */
 
-.navbar-fixed {
-  position: fixed;
+.navbar.fixed {
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 100;
 }
 
@@ -253,42 +107,44 @@
   border-bottom: 0.15em solid #666;
 }
 
-/* black navbar
------------------------------------------------ */
-
-.navbar.dark {
-  background: #1b1b1b;
-}
-
-.dark .menu li a:hover,
-.dark .menu li a:focus {
-  background: #222;
-}
-
-.dark .menu-icon:before {
-  border-color: #ccc;
-}
-
 /* dropdown
 ----------------------------------------------- */
-
-li.dropdown {
-  padding: 15px 20px;
-}
 
 .dropdown ul {
 	z-index: 500;
 	position: absolute;
 	left: 0;
-  top: 1.5em;
-	padding-top: 3em;
+  top: 2.5em;
+	padding-top: 0.7em;
 	display: none;
 }
 
-.dropdown ul li {
+.dropdown li {
   background: #fafafa;
 }
 
 .dropdown:hover { background: #eee }
 
 .dropdown:hover ul { display: block; visibility: visible }
+
+/* black navbar
+----------------------------------------------- */
+
+.dark.navbar {
+  border-color: #333;
+}
+
+.dark.navbar,
+.dark .dropdown li {
+  background: #1b1b1b;
+}
+
+.dark .menu li a:hover,
+.dark .menu li a:focus,
+.dark .dropdown:hover {
+  background: #222;
+}
+
+.dark .menu-icon:before {
+  border-color: #ccc;
+}

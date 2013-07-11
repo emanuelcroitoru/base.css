@@ -1,25 +1,16 @@
 
 @media (max-width: 480px) {
 
-  .menu-horizontal {
-    /* width: 100%; */
-  }
-
-  .menu-children li {
-    display: block;
-    border-bottom: 1px solid black;
-  }
-
   .responsive .menu {
     display: none;
   }
 
   .responsive .menu-icon {
-    display: inherit !important;
+    display: inherit;
   }
 
   .responsive .menu:target {
-    display: inherit !important;
+    display: inherit;
     width: 100%;
   }
 
@@ -32,7 +23,11 @@
   }
 
   .toggled.menu li {
-    display: block !important;
+    display: block;
+  }
+  
+  .responsive .dropdown:hover ul {
+    display: none; /* no support for responsive submenus yet */
   }
 
 }

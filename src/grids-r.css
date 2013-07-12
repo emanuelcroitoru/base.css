@@ -11,6 +11,10 @@
   }
 */
 
+}
+
+@media (max-width: 767px) {
+
   .responsive .columns > *,
   .responsive.columns > * {
     float: none;
@@ -18,10 +22,6 @@
     width: 100%;
     margin-left: 0;
   }
-
-}
-
-@media (max-width: 767px) {
 
   .responsive .fixed-width,
   .responsive.fixed-width {

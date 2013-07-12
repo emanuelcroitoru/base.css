@@ -1182,7 +1182,7 @@ pre {
 }
 
 .menu a,
-.dropdown > span {
+.menu > span {
   display: block;
   color: inherit;
   text-decoration: none;

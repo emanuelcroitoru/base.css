@@ -23,7 +23,7 @@
 }
 
 .menu a,
-.menu > span {
+.menu span {
   display: block;
   color: inherit;
   text-decoration: none;

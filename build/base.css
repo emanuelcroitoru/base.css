@@ -543,7 +543,7 @@ pre {
 /* columns
 -------------------------------------------------------------*/
 
-.columns > div {
+.columns > * {
   display: inline-block;
   float: left;
 }

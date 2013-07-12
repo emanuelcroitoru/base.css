@@ -20,7 +20,7 @@
   float: left;
 }
 
-.two.columns > div {
+.two.columns > * {
   width: 50%;
 }
 

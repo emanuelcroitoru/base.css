@@ -1244,7 +1244,7 @@ pre {
   position: relative;
   font-size: 24px;
   padding: 0.6em 0.8em;
-  margin: 6px;
+  margin: 7px;
   text-indent: -9999px;
   background: transparent;
   border: none;
@@ -1305,33 +1305,31 @@ pre {
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
 
-  .responsive .menu {
+  .responsive.navbar .menu,
+  .responsive .navbar .menu {
     display: none;
+  }
+
+  .responsive.navbar .menu:target,
+  .responsive .navbar .menu:target {
+    display: inherit;
+    width: 100%;
   }
 
   .responsive .menu-icon {
     display: inherit;
   }
 
-  .responsive .menu:target {
-    display: inherit;
-    width: 100%;
-  }
-
-  .responsive .menu:target li {
+  .responsive .menu li {
     display: block; /* or inherit */
-  }
-
-  .visible.menu {
-    width: 100%;
   }
 
   .visible.menu li {
     display: block;
   }
-  
+
   .responsive .dropdown:hover ul {
     display: none; /* no support for responsive submenus yet */
   }

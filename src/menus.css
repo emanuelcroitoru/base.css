@@ -30,7 +30,7 @@
   white-space: nowrap;
 }
 
-.menu a, 
+.menu a,
 .dropdown > span {
   padding: 12px 20px;
 }
@@ -89,7 +89,7 @@
   position: relative;
   font-size: 24px;
   padding: 0.6em 0.8em;
-  margin: 12px;
+  margin: 6px;
   text-indent: -9999px;
   background: transparent;
   border: none;

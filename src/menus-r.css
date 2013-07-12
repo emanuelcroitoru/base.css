@@ -1,31 +1,29 @@
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
 
-  .responsive .menu {
+  .responsive.navbar .menu,
+  .responsive .navbar .menu {
     display: none;
+  }
+
+  .responsive.navbar .menu:target,
+  .responsive .navbar .menu:target {
+    display: inherit;
+    width: 100%;
   }
 
   .responsive .menu-icon {
     display: inherit;
   }
 
-  .responsive .menu:target {
-    display: inherit;
-    width: 100%;
-  }
-
-  .responsive .menu:target li {
+  .responsive .menu li {
     display: block; /* or inherit */
-  }
-
-  .visible.menu {
-    width: 100%;
   }
 
   .visible.menu li {
     display: block;
   }
-  
+
   .responsive .dropdown:hover ul {
     display: none; /* no support for responsive submenus yet */
   }

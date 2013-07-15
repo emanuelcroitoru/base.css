@@ -440,10 +440,13 @@ table {
 img {
   display: inline-block;
   height: auto;
-  max-width: 100%;
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
+}
+
+.responsive img {
+  max-width: 100%;
 }
 
 /* fix for google maps */
@@ -548,7 +551,7 @@ pre {
   float: left;
 }
 
-.two.columns > div {
+.two.columns > * {
   width: 50%;
 }
 
@@ -704,6 +707,10 @@ pre {
   }
 */
 
+}
+
+@media (max-width: 767px) {
+
   .responsive .columns > *,
   .responsive.columns > * {
     float: none;
@@ -711,10 +718,6 @@ pre {
     width: 100%;
     margin-left: 0;
   }
-
-}
-
-@media (max-width: 767px) {
 
   .responsive .fixed-width,
   .responsive.fixed-width {
@@ -1607,14 +1610,15 @@ pre {
 -------------------------------------------------------------*/
 
 .fixed     { position: fixed; width: 100%; }
-.left      { float: left; clear: left; }
-.right     { float: right; clear: right; }
+.left      { float: left !important; clear: left; }
+.right     { float: right !important; clear: right; }
 .center    { display: block; text-align: center; }
 .centered  { float: none; margin-left: auto; margin-right: auto; }
 .clear     { clear: both }
 .visible   { display: inherit !important }
 .hidden    { display: none !important }
 .invisible { visibility: hidden }
+.block     { display: block }
 
 .uppercase {
   text-transform: uppercase;

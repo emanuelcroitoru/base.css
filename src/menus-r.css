@@ -6,10 +6,13 @@
     display: none;
   }
 
+  .responsive.navbar .menu.visible,
   .responsive.navbar .menu:target,
+  .responsive .navbar .menu.visible,
   .responsive .navbar .menu:target {
     display: inherit;
     width: 100%;
+/*    float: none !important; */
   }
 
   .responsive .menu-icon {

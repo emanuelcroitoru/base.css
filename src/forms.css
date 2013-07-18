@@ -122,15 +122,16 @@
 
 .form label {
   display: block;
+  margin-bottom: 5px;
 }
 
 .inline label {
-  display: inline;
+  display: inline-block;
 }
 
 .form fieldset {
   margin: 0;
-  padding: 0.35em 0 0.75em;
+  padding: 0.5em 0;
   border: 0;
 }
 

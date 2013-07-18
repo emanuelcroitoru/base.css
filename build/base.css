@@ -1,5 +1,6 @@
 /*!
 Base.css 0.0.1
+Written by Tomás Pollak
 Based on Pure and Bootstrap CSS Frameworks
 http://opensource.org/licenses/MIT
 */
@@ -864,14 +865,13 @@ pre {
 .form select[multiple] {
     height: auto;
 }
-.form label {
-    font-size: 0.9em;
-}
+
 .form fieldset {
     margin: 0;
     padding: 0.35em 0 0.75em;
     border: 0;
 }
+
 .form legend {
     display: block;
     width: 100%;
@@ -1315,10 +1315,13 @@ pre {
     display: none;
   }
 
+  .responsive.navbar .menu.visible,
   .responsive.navbar .menu:target,
+  .responsive .navbar .menu.visible,
   .responsive .navbar .menu:target {
     display: inherit;
     width: 100%;
+/*    float: none !important; */
   }
 
   .responsive .menu-icon {

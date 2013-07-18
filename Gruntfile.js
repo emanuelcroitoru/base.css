@@ -121,6 +121,7 @@ grunt.initConfig({
                 banner: [
                     '/*!',
                     'Base.css <%= pkg.version %>',
+                    'Written by Tomás Pollak',
                     'Based on Pure and Bootstrap CSS Frameworks',
                     'http://opensource.org/licenses/MIT',
                     '*/\n'

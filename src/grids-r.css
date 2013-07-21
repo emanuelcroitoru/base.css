@@ -3,16 +3,6 @@
 
 }
 
-@media (max-width: 480px) {
-
-/*
-  .responsive [class *="span"] {
-      width: 100%;
-  }
-*/
-
-}
-
 @media (max-width: 767px) {
 
   .responsive .columns > *,
@@ -44,5 +34,15 @@
   .responsive.fixed-width {
     width: 768px;
   }
+
+}
+
+@media (max-width: 480px) {
+
+/*
+  .responsive [class *="span"] {
+      width: 100%;
+  }
+*/
 
 }

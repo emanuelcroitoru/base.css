@@ -1,48 +1,48 @@
 @media only screen and (max-width : 480px) {
 
-    .responsive .form {
-      overflow: hidden;
-    }
+  .responsive .form {
+    overflow: hidden;
+  }
 
-    .responsive .form input[type="submit"],
-    .responsive .form button[type="submit"] {
-        width: 100%;
-    }
+  .responsive .form input[type="submit"],
+  .responsive .form button[type="submit"] {
+    width: 100%;
+  }
 
-    .responsive .form input[type="text"],
-    .responsive .form input[type="password"],
-    .responsive .form input[type="email"],
-    .responsive .form input[type="url"],
-    .responsive .form input[type="date"],
-    .responsive .form input[type="month"],
-    .responsive .form input[type="time"],
-    .responsive .form input[type="datetime"],
-    .responsive .form input[type="datetime-local"],
-    .responsive .form input[type="week"],
-    .responsive .form input[type="number"],
-    .responsive .form input[type="search"],
-    .responsive .form input[type="tel"],
-    .responsive .form input[type="color"],
-    .responsive .form textarea,
-    .responsive .form select,
-    .responsive .form label {
-        width: 100%;
-        display: block;
-    }
+  .responsive .form input[type="text"],
+  .responsive .form input[type="password"],
+  .responsive .form input[type="email"],
+  .responsive .form input[type="url"],
+  .responsive .form input[type="date"],
+  .responsive .form input[type="month"],
+  .responsive .form input[type="time"],
+  .responsive .form input[type="datetime"],
+  .responsive .form input[type="datetime-local"],
+  .responsive .form input[type="week"],
+  .responsive .form input[type="number"],
+  .responsive .form input[type="search"],
+  .responsive .form input[type="tel"],
+  .responsive .form input[type="color"],
+  .responsive .form textarea,
+  .responsive .form select,
+  .responsive .form label {
+    width: 100%;
+    display: block;
+  }
 
-    .responsive .form label {
-        margin-top: 1px;
-    }
+  .responsive .form label {
+    margin-top: 1px;
+  }
 
-    .responsive .form-aligned .control-group label {
-        margin-bottom: 0.3em;
-        text-align: left;
-        display: block;
-        width: 100%;
-    }
+  .responsive .form-aligned .control-group label {
+    margin-bottom: 0.3em;
+    text-align: left;
+    display: block;
+    width: 100%;
+  }
 
-    .responsive .form-aligned .controls {
-        margin: 1.5em 0 0 0;
-    }
+  .responsive .form-aligned .controls {
+    margin: 1.5em 0 0 0;
+  }
 
 }

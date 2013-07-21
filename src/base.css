@@ -35,15 +35,12 @@ table {
 }
 
 img {
+  max-width: 100%;
   display: inline-block;
   height: auto;
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
-}
-
-.responsive img {
-  max-width: 100%;
 }
 
 /* fix for google maps */

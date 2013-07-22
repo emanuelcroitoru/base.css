@@ -11,7 +11,7 @@
 .hidden    { display: none !important }
 .invisible { visibility: hidden }
 .block     { display: block !important }
-.inline    { display: inline !important }
+.inline    { display: inline-block !important; *display: inline; /*IE 6/7*/ }
 
 .uppercase {
   text-transform: uppercase;

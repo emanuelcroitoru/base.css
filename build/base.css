@@ -1626,8 +1626,8 @@ pre {
 .visible   { display: inherit !important }
 .hidden    { display: none !important }
 .invisible { visibility: hidden }
-.block     { display: block }
-.inline    { display: inline }
+.block     { display: block !important }
+.inline    { display: inline !important }
 
 .uppercase {
   text-transform: uppercase;

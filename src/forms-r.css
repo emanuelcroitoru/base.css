@@ -30,9 +30,11 @@
     display: block;
   }
 
+  /*
   .responsive .form label {
     margin-top: 1px;
   }
+  */
 
   .responsive .form-aligned .control-group label {
     margin-bottom: 0.3em;

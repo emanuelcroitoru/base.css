@@ -145,6 +145,10 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
+.form .control-group {
+  margin-bottom: 10px;
+}
+
 .form-stacked input[type="text"],
 .form-stacked input[type="password"],
 .form-stacked input[type="email"],
@@ -178,9 +182,6 @@
 }
 
 /* Aligned Forms */
-.form-aligned .control-group {
-  margin-bottom: 0.5em;
-}
 
 .form-aligned .control-group label {
   text-align: right;

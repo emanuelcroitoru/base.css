@@ -765,7 +765,7 @@ pre {
 .form select,
 .form textarea {
   padding: 0.5em 0.6em;
-  display: inline-block;
+  display: block;
   border: 1px solid #ccc;
 /*    font-size: 0.9em; */
   box-shadow: inset 0 1px 3px #ddd;
@@ -888,6 +888,10 @@ pre {
   border-bottom: 1px solid #e5e5e5;
 }
 
+.form .control-group {
+  margin-bottom: 10px;
+}
+
 .form-stacked input[type="text"],
 .form-stacked input[type="password"],
 .form-stacked input[type="email"],
@@ -921,9 +925,6 @@ pre {
 }
 
 /* Aligned Forms */
-.form-aligned .control-group {
-  margin-bottom: 0.5em;
-}
 
 .form-aligned .control-group label {
   text-align: right;
@@ -971,10 +972,6 @@ pre {
   }
 
   .responsive .form input[type="submit"],
-  .responsive .form button[type="submit"] {
-    width: 100%;
-  }
-
   .responsive .form input[type="text"],
   .responsive .form input[type="password"],
   .responsive .form input[type="email"],
@@ -989,26 +986,11 @@ pre {
   .responsive .form input[type="search"],
   .responsive .form input[type="tel"],
   .responsive .form input[type="color"],
+  .responsive .form button[type="submit"],
   .responsive .form textarea,
   .responsive .form select,
   .responsive .form label {
     width: 100%;
-    display: block;
-  }
-
-  .responsive .form label {
-    margin-top: 1px;
-  }
-
-  .responsive .form-aligned .control-group label {
-    margin-bottom: 0.3em;
-    text-align: left;
-    display: block;
-    width: 100%;
-  }
-
-  .responsive .form-aligned .controls {
-    margin: 1.5em 0 0 0;
   }
 
 }
@@ -1193,7 +1175,8 @@ pre {
 }
 
 .menu a,
-.menu span {
+.menu span,
+.navbar .brand {
   display: block;
   color: inherit;
   text-decoration: none;
@@ -1214,7 +1197,7 @@ pre {
   overflow: visible;
   color: #777777;
   min-height: 44px;
-  border-bottom: 1px solid #eee;
+/*  border-bottom: 1px solid #eee; */
   background: #fafafa;
 }
 
@@ -1230,12 +1213,12 @@ pre {
 /* apply clearfix on navbar, since it floats everything */
 .navbar:before,
 .navbar:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+  content: " "; /* 1 */
+  display: table; /* 2 */
 }
 
 .navbar:after {
-    clear: both;
+  clear: both;
 }
 
 /* menu icon
@@ -1276,22 +1259,38 @@ pre {
 /* dropdown
 ----------------------------------------------- */
 
+.dropdown {
+  position: relative;
+}
+
 .dropdown ul {
-	z-index: 500;
-	position: absolute;
-	left: 0;
+  z-index: 100;
+  position: absolute;
+  left: 0;
   top: 2.5em;
-	padding-top: 0.7em;
-	display: none;
+  padding-top: 0.7em;
+  display: none;
 }
 
 .dropdown li {
+  z-index: 100;
   background: #fafafa;
+  min-width: 150px;
 }
 
-.dropdown:hover { background: #eee }
+.right.dropdown ul {
+  left: auto;
+  right: 0;
+}
 
-.dropdown:hover ul { display: block; visibility: visible }
+.hover.dropdown:hover {
+  background: #eee
+}
+
+.hover.dropdown:hover ul {
+  display: block;
+  visibility: visible
+}
 
 /* black navbar
 ----------------------------------------------- */
@@ -1493,6 +1492,30 @@ pre {
  Most of this code is from http://tilomitra.github.io/cssextras/
 */
 
+/* caret
++----------------------------------------------- */
+
+.caret {
+  display: inline-block !important;
+  padding: 0 !important;
+  width: 0;
+  height: 0;
+  vertical-align: top;
+  border-top: 4px solid #000000;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  content: "";
+}
+
+.dropdown .caret {
+  margin-top: 9px;
+  margin-left: 3px;
+}
+
+.dark .caret {
+  border-top-color: #666;
+}
+
 /* Badges/Pills */
 
 .badge,
@@ -1643,10 +1666,15 @@ pre {
 /* clearfix
 -------------------------------------------------------------*/
 
+.clearfix {
+  *zoom: 1;
+}
+
 .clearfix:before,
 .clearfix:after {
   content: " "; /* 1 */
   display: table; /* 2 */
+  line-height: 0;
 }
 
 .clearfix:after {

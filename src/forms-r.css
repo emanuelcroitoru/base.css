@@ -5,10 +5,6 @@
   }
 
   .responsive .form input[type="submit"],
-  .responsive .form button[type="submit"] {
-    width: 100%;
-  }
-
   .responsive .form input[type="text"],
   .responsive .form input[type="password"],
   .responsive .form input[type="email"],
@@ -23,28 +19,11 @@
   .responsive .form input[type="search"],
   .responsive .form input[type="tel"],
   .responsive .form input[type="color"],
+  .responsive .form button[type="submit"],
   .responsive .form textarea,
   .responsive .form select,
   .responsive .form label {
     width: 100%;
-    display: block;
-  }
-
-  /*
-  .responsive .form label {
-    margin-top: 1px;
-  }
-  */
-
-  .responsive .form-aligned .control-group label {
-    margin-bottom: 0.3em;
-    text-align: left;
-    display: block;
-    width: 100%;
-  }
-
-  .responsive .form-aligned .controls {
-    margin: 1.5em 0 0 0;
   }
 
 }

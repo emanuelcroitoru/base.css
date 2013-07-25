@@ -7,44 +7,82 @@
   <title>Columns Example</title>
   <link rel="stylesheet" href="../../build/base.css">
 
+  <style type="text/css">
+    body { background: #ccc }
+    .brand { font-weight: bold; }
+  </style>
+
 </head>
 <body>
-  <div class="responsive dark navbar fixed">
+  <div class="responsive dark navbar">
+    <a class="brand" href="#">Home</a>
+    <a href="#menu1" class="toggle-visible right menu-icon"></a>
 
-    <ul class="visible menu">
-      <li class="location">
-
-        <a href="/">Devices</a>
-
-      </li>
+    <ul class="right menu" id="menu1">
+      <li><a href="#">Foo</a></li>
+      <li><a href="#">Logout</a></li>
     </ul>
-
-    <a href="#menu" class="toggle right menu-icon"></a>
-
-    <ul class="right menu" id="menu">
-      <li><a href="/">Home</a></li>
-      <li><a href="/settings">Settings</a></li>
-      <li class="dropdown">
-        <span>Dropdown no link</span>
-        <ul>
-          <li><a href="#">Foo</a></li> 
-          <li><a href="#">Bar</a></li> 
-          <li><a href="#">Baz</a></li> 
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#">Dropdown with link</a>
-        <ul>
-          <li><a href="#">Foo</a></li> 
-          <li><a href="#">Bar</a></li> 
-          <li><a href="#">Baz</a></li> 
-        </ul>
-      </li>
-      <li><a href="/logout">Logout</a></li>
-    </ul>
-
   </div>
 
-  <h1>Hello there!</h1>
+  <div class="navbar">
+    <ul class="container menu">
+      <li><a class="brand" href="#">My App</a></li>
+      <li><a href="#">Foo</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+
+  <div class="responsive navbar">
+    <div class="container">
+      <a href="#menu3" class="toggle-visible menu-icon"></a>
+      <ul id="menu3" class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Foo</a></li>
+        <li><a href="#">Something</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="responsive dark navbar">
+    <div class="container">
+      <a class="brand" href="/">Home</a>
+      <a href="#menu2" class="toggle-visible right menu-icon"></a>
+
+      <ul class="right menu" id="menu2">
+        <li><a href="#">Home</a></li>
+        <li><a href="/settings">Settings</a></li>
+        <li class="hover dropdown">
+          <span>Dropdown on hover</span>
+          <ul>
+            <li><a href="#">Foo</a></li>
+            <li><a href="#">Bar</a></li>
+            <li><a href="#">Baz</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="toggle-visible" href="#dropdown1">
+            Dropdown on click
+            <span class="caret"></span>
+          </a>
+          <ul id="dropdown1">
+            <li><a href="#">Foo</a></li>
+            <li><a href="#">Bar</a></li>
+            <li><a href="#">Baz</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>
+    $('.toggle-visible').on('click', function(e){
+      e.preventDefault();
+      var target = $(this).attr('href');
+      $(target).toggleClass('visible');
+    })
+  </script>
+
 </body>
 </html>

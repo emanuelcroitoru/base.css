@@ -23,7 +23,8 @@
 }
 
 .menu a,
-.menu span {
+.menu span,
+.navbar .brand {
   display: block;
   color: inherit;
   text-decoration: none;
@@ -44,7 +45,7 @@
   overflow: visible;
   color: #777777;
   min-height: 44px;
-  border-bottom: 1px solid #eee;
+/*  border-bottom: 1px solid #eee; */
   background: #fafafa;
 }
 
@@ -60,12 +61,12 @@
 /* apply clearfix on navbar, since it floats everything */
 .navbar:before,
 .navbar:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+  content: " "; /* 1 */
+  display: table; /* 2 */
 }
 
 .navbar:after {
-    clear: both;
+  clear: both;
 }
 
 /* menu icon
@@ -106,22 +107,38 @@
 /* dropdown
 ----------------------------------------------- */
 
+.dropdown {
+  position: relative;
+}
+
 .dropdown ul {
-	z-index: 500;
-	position: absolute;
-	left: 0;
+  z-index: 100;
+  position: absolute;
+  left: 0;
   top: 2.5em;
-	padding-top: 0.7em;
-	display: none;
+  padding-top: 0.7em;
+  display: none;
 }
 
 .dropdown li {
+  z-index: 100;
   background: #fafafa;
+  min-width: 150px;
 }
 
-.dropdown:hover { background: #eee }
+.right.dropdown ul {
+  left: auto;
+  right: 0;
+}
 
-.dropdown:hover ul { display: block; visibility: visible }
+.hover.dropdown:hover {
+  background: #eee
+}
+
+.hover.dropdown:hover ul {
+  display: block;
+  visibility: visible
+}
 
 /* black navbar
 ----------------------------------------------- */

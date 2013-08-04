@@ -135,7 +135,7 @@
 -------------------------------------------------------------*/
 
 .box {
-  width: 300px;
+  width: 280px;
   margin: 40px auto 0;
   padding: 20px 30px;
   border: 1px solid #ccc;
@@ -143,6 +143,7 @@
 }
 
 .box input[type=text],
+.box input[type=email],
 .box input[type=password] {
   width: 100%;
 }

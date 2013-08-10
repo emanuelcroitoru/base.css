@@ -136,3 +136,47 @@
   background: rgb(255, 163, 0);
   color: white;
 }
+
+/* close button
+-------------------------------------------------------------*/
+
+.close-button {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: inherit;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+.close-button.left {
+  margin: 1px 4px 4px 0;
+}
+
+.close-button.right {
+  margin: 1px 0 4px 4px;
+}
+
+.close-button:focus {
+  outline: none;
+}
+
+.close-button:after {
+  content: '\00d7';
+  display: block;
+  font-size: 20px;
+
+  opacity: 0.4;
+  color: #666;
+
+  text-align: center;
+  font-weight: bolder;
+}
+
+.close-button:hover:after {
+  opacity: 0.8;
+}

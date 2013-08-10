@@ -147,3 +147,41 @@
 .box input[type=password] {
   width: 100%;
 }
+
+/* pager
+-------------------------------------------------------------*/
+
+.pager {
+  margin: 30px 0;
+  text-align: center;
+}
+.pager li {
+  display: inline-block;
+}
+
+.pager a,
+.pager span {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  padding: 0.4em 0.6em;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.pager a:hover,
+.pager span:hover {
+  background: #fff;
+  border-color: #ccc;
+}
+
+.pager .active a,
+.pager .active span {
+  background: #2BA3D4;
+  border-color: #2BA3D4;
+  color: #fff;
+}
+
+.pager .disabled {
+  opacity: 0.5;
+}

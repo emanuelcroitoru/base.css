@@ -32,6 +32,10 @@
   padding: 12px 20px;
 }
 
+.menu a.btn {
+  color: white; /* undo inherit */
+}
+
 .menu a:hover,
 .menu a:focus {
   background: #eee;

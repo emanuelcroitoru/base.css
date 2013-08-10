@@ -1488,6 +1488,50 @@ pre {
   color: white;
 }
 
+/* close button
+-------------------------------------------------------------*/
+
+.close-button {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: inherit;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+.close-button.left {
+  margin: 1px 4px 4px 0;
+}
+
+.close-button.right {
+  margin: 1px 0 4px 4px;
+}
+
+.close-button:focus {
+  outline: none;
+}
+
+.close-button:after {
+  content: '\00d7';
+  display: block;
+  font-size: 20px;
+
+  opacity: 0.4;
+  color: #666;
+
+  text-align: center;
+  font-weight: bolder;
+}
+
+.close-button:hover:after {
+  opacity: 0.8;
+}
+
 /*
  Most of this code is from http://tilomitra.github.io/cssextras/
 */
@@ -1552,11 +1596,12 @@ pre {
   background-color: #4D370C;
 }
 
-/* Alerts */
+/* alerts
+----------------------------------------------- */
+
 .alert {
   position: relative;
   padding: 10px 15px;
-  background: #ccc;
 }
 
 .alert label {
@@ -1568,31 +1613,52 @@ pre {
   white-space: nowrap;
 }
 
-.alert {
-  color: #c09853;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  background-color: #fcf8e3;
-  border: 1px solid #fbeed5;
+.alert,
+.alert-notice {
+  background: #ebf7fd;
+  border: 1px solid rgba(45,112,145,0.3);
 }
 
-.alert-error {
-  color: #b94a48;
-  background-color: #f2dede;
-  border-color: #eed3d7;
+.alert,
+.alert-notice,
+.alert .close-button:after,
+.alert-notice .close-button:after {
+  color: #419BC7;
 }
-
-/*
-.alert-warning {
-  background-color: rgb(250, 191, 103);
-  color: rgb(151, 96, 13);
-}
-*/
 
 .alert-success {
-  color: #468847;
-  background-color: #dff0d8;
-  border-color: #d6e9c6;
+  background: #f2fae3;
+  border-color: rgba(101,159,19,0.3);
 }
+
+.alert-success,
+.alert-success .close-button:after {
+  color: #659f13;
+}
+
+.alert-warning {
+  background: #fffceb;
+  border-color: rgba(226,131,39,0.3);
+}
+
+.alert-warning,
+.alert-warning .close-button:after {
+  color: #e28327;
+}
+
+.alert-error,
+.alert-danger {
+  background: #fff1f0;
+  border-color: rgba(216,80,48,0.3);
+}
+
+.alert-danger,
+.alert-error,
+.alert-error .close-button:after,
+.alert-danger .close-button:after {
+  color: #CA6664;
+}
+
 
 /* tabs
 ----------------------------------------------- */
@@ -1625,16 +1691,55 @@ pre {
 -------------------------------------------------------------*/
 
 .box {
-  width: 300px;
-  margin: 100px auto 0;
+  width: 280px;
+  margin: 40px auto 0;
   padding: 20px 30px;
   border: 1px solid #ccc;
   background: #fafafa;
 }
 
 .box input[type=text],
+.box input[type=email],
 .box input[type=password] {
   width: 100%;
+}
+
+/* pager
+-------------------------------------------------------------*/
+
+.pager {
+  margin: 30px 0;
+  text-align: center;
+}
+.pager li {
+  display: inline-block;
+}
+
+.pager a,
+.pager span {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  padding: 0.4em 0.6em;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.pager a:hover,
+.pager span:hover {
+  background: #fff;
+  border-color: #ccc;
+}
+
+.pager .active a,
+.pager .active span {
+  background: #2BA3D4;
+  border-color: #2BA3D4;
+  color: #fff;
+}
+
+.pager .disabled {
+  opacity: 0.5;
 }
 
 /* helpers

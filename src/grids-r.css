@@ -9,7 +9,7 @@
   .responsive.columns > * {
     float: none;
     display: block;
-    width: 100%;
+    width: 100% !important;
     margin-left: 0 !important;
   }
 

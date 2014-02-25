@@ -10,7 +10,7 @@
     float: none;
     display: block;
     width: 100%;
-    margin-left: 0;
+    margin-left: 0 !important;
   }
 
   .responsive .fixed-width,
@@ -22,7 +22,7 @@
     width: 100%;
   }
 
-  .responsive [class *="push"] {
+  .responsive [class *="offset"] {
     margin-left: 0;
   }
 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buttons</title>
+  <link rel="stylesheet" href="../../build/base-min.css">
+  <style type="text/css">
+    a,
+    a:visited {
+      color: #ff6600
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Buttons</h1>
+
+  <div class="two columns">
+    <div class="dropdown inline">
+      <button class="btn toggle-visible" href="#dropdown1">
+        Clickable, with buttons
+        <span class="caret"></span>
+      </button>
+
+      <ul id="dropdown1" class="menu">
+        <li>
+          <a class="btn btn-success">Close</a>
+        </li>
+
+        <li>
+          <a class="btn">Trash</a>
+        </li>
+
+        <li>
+          <a class="btn btn-danger" value="spam">Spam</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="dropdown inline">
+      <button class="btn btn-primary toggle-visible" href="#dropdown2">
+        Clickable, with buttons
+        <span class="caret"></span>
+      </button>
+
+      <ul id="dropdown2" class="menu">
+        <li>
+          <a class="">Close</a>
+        </li>
+
+        <li>
+          <a class="">Trash</a>
+        </li>
+
+        <li>
+          <a class="" value="spam">Spam</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+  $(document).on('click', '.toggle-visible', function(e) {
+    e.preventDefault();
+    var target = $(this).attr('target') || $(this).attr('href');
+    $(target).toggleClass('visible');
+  });
+</script>
+</body>
+</html>

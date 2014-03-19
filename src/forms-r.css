@@ -1,28 +1,28 @@
 @media only screen and (max-width : 480px) {
 
-  .responsive .form {
+  .responsive form {
     overflow: hidden;
   }
 
-  .responsive .form input[type="submit"],
-  .responsive .form input[type="text"],
-  .responsive .form input[type="password"],
-  .responsive .form input[type="email"],
-  .responsive .form input[type="url"],
-  .responsive .form input[type="date"],
-  .responsive .form input[type="month"],
-  .responsive .form input[type="time"],
-  .responsive .form input[type="datetime"],
-  .responsive .form input[type="datetime-local"],
-  .responsive .form input[type="week"],
-  .responsive .form input[type="number"],
-  .responsive .form input[type="search"],
-  .responsive .form input[type="tel"],
-  .responsive .form input[type="color"],
-  .responsive .form button[type="submit"],
-  .responsive .form textarea,
-  .responsive .form select,
-  .responsive .form label {
+  .responsive input[type="submit"],
+  .responsive input[type="text"],
+  .responsive input[type="password"],
+  .responsive input[type="email"],
+  .responsive input[type="url"],
+  .responsive input[type="date"],
+  .responsive input[type="month"],
+  .responsive input[type="time"],
+  .responsive input[type="datetime"],
+  .responsive input[type="datetime-local"],
+  .responsive input[type="week"],
+  .responsive input[type="number"],
+  .responsive input[type="search"],
+  .responsive input[type="tel"],
+  .responsive input[type="color"],
+  .responsive button[type="submit"],
+  .responsive textarea,
+  .responsive select,
+  .responsive label {
     width: 100%;
   }
 

@@ -5,22 +5,22 @@
  https://github.com/yui/pure/blob/master/LICENSE.md
 */
 
-.form input[type="text"],
-.form input[type="password"],
-.form input[type="email"],
-.form input[type="url"],
-.form input[type="date"],
-.form input[type="month"],
-.form input[type="time"],
-.form input[type="datetime"],
-.form input[type="datetime-local"],
-.form input[type="week"],
-.form input[type="number"],
-.form input[type="search"],
-.form input[type="tel"],
-.form input[type="color"],
-.form select,
-.form textarea {
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select,
+textarea {
   padding: 0.5em 0.6em;
   display: block;
   border: 1px solid #ccc;
@@ -38,104 +38,111 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.form input[type="text"]:focus,
-.form input[type="password"]:focus,
-.form input[type="email"]:focus,
-.form input[type="url"]:focus,
-.form input[type="date"]:focus,
-.form input[type="month"]:focus,
-.form input[type="time"]:focus,
-.form input[type="datetime"]:focus,
-.form input[type="datetime-local"]:focus,
-.form input[type="week"]:focus,
-.form input[type="number"]:focus,
-.form input[type="search"]:focus,
-.form input[type="tel"]:focus,
-.form input[type="color"]:focus,
-.form select:focus,
-.form textarea:focus {
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+select:focus,
+textarea:focus {
   color: #333;
   outline: 0;
   outline: thin dotted \9; /* IE6-9 */
   border-color: #129FEA;
 }
 
-.form input[type="file"]:focus,
-.form input[type="radio"]:focus,
-.form input[type="checkbox"]:focus {
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
   outline: thin dotted #333;
   outline: 1px auto #129FEA;
 }
-.form .checkbox,
-.form .radio {
+
+.checkbox,
+.radio {
   margin: 0.5em 0;
   display: block;
 }
 
-.form input[type="text"][disabled],
-.form input[type="password"][disabled],
-.form input[type="email"][disabled],
-.form input[type="url"][disabled],
-.form input[type="date"][disabled],
-.form input[type="month"][disabled],
-.form input[type="time"][disabled],
-.form input[type="datetime"][disabled],
-.form input[type="datetime-local"][disabled],
-.form input[type="week"][disabled],
-.form input[type="number"][disabled],
-.form input[type="search"][disabled],
-.form input[type="tel"][disabled],
-.form input[type="color"][disabled],
-.form select[disabled],
-.form textarea[disabled],
-.form input[readonly],
-.form select[readonly],
-.form textarea[readonly] {
+input[type="text"][disabled],
+input[type="password"][disabled],
+input[type="email"][disabled],
+input[type="url"][disabled],
+input[type="date"][disabled],
+input[type="month"][disabled],
+input[type="time"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="week"][disabled],
+input[type="number"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="color"][disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
   cursor: not-allowed;
   background-color: #eaeded;
   color: #cad2d3;
   border-color: transparent;
 }
-.form input:focus:invalid,
-.form textarea:focus:invalid,
-.form select:focus:invalid {
+
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
   color: #b94a48;
   border: 1px solid #ee5f5b;
 }
-.form input:focus:invalid:focus,
-.form textarea:focus:invalid:focus,
-.form select:focus:invalid:focus {
+
+input:focus:invalid:focus,
+textarea:focus:invalid:focus,
+select:focus:invalid:focus {
   border-color: #e9322d;
 }
-.form input[type="file"]:focus:invalid:focus,
-.form input[type="radio"]:focus:invalid:focus,
-.form input[type="checkbox"]:focus:invalid:focus {
+
+input[type="file"]:focus:invalid:focus,
+input[type="radio"]:focus:invalid:focus,
+input[type="checkbox"]:focus:invalid:focus {
   outline-color: #e9322d;
 }
-.form select {
+
+select {
   border: 1px solid #ccc;
   background-color: white;
 }
-.form select[multiple] {
+
+select[multiple] {
   height: auto;
 }
 
-.form label {
+label {
   display: block;
   margin-bottom: 5px;
+  color: #999;
 }
 
 .inline label {
   display: inline-block;
 }
 
-.form fieldset {
+fieldset {
   margin: 0;
   padding: 0.5em 0;
   border: 0;
 }
 
-.form legend {
+legend {
   display: block;
   width: 100%;
   padding: 0.3em 0;
@@ -145,7 +152,7 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
-.form .control-group {
+.control-group {
   margin-bottom: 10px;
 }
 
@@ -196,10 +203,10 @@
 }
 
 /* Grouped Inputs */
-.form .group fieldset {
+.group fieldset {
   margin-bottom: 10px;
 }
-.form .group input {
+.group input {
   display: block;
   padding: 10px;
   margin: 0;
@@ -207,17 +214,17 @@
   position: relative;
   top: -1px;
 }
-.form .group input:focus {
+.group input:focus {
   z-index: 2;
 }
-.form .group input:first-child {
+.group input:first-child {
   top: 1px;
   border-radius: 4px 4px 0 0;
 }
-.form .group input:last-child {
+.group input:last-child {
   top: -2px;
   border-radius: 0 0 4px 4px;
 }
-.form .group button {
+.group button {
   margin: 0.35em 0;
 }

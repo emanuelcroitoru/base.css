@@ -34,8 +34,8 @@
 .badge-success,
 .badge-info,
 .badge-inverse {
-  padding: 0.35em 0.9em 0.35em;
-  background-color: #9D988E;
+  padding: .3em .5em;
+  background-color: #999;
   color: #fff;
   display: inline-block;
   font-size: 11.844px;
@@ -43,9 +43,10 @@
   line-height: 1.2em;
   vertical-align: baseline;
   white-space: nowrap;
-  border-radius: 20px;
-  margin: 0.2em;
+  border-radius: 15px;
+  margin: 0;
 }
+
 .badge-error {
   background-color: #D13C38;
 }

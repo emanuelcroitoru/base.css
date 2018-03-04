@@ -17,8 +17,8 @@ body {
 }
 
 input,button,select,textarea {
+  font-size: 14px;
   font-family: inherit;
-  font-size: inherit;
   line-height: inherit;
 }
 
